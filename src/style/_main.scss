@@ -508,7 +508,8 @@ main {
     .action__item {
         display: flex;
         align-items: center;
-        &.first .action__item_img {
+        &.first .action__item_img,
+        &.second .action__item_img {
             .action__item_img_phone {
                 width: 309px;
                 height: 639px;
@@ -524,6 +525,9 @@ main {
             justify-content: center;
             position: relative;
             flex: 1 0 50%;
+        }
+        &.second {
+            flex-direction: row-reverse;
         }
         .item__1 {
             position: absolute;
@@ -561,6 +565,57 @@ main {
             flex: 1 0 auto;
             display: flex;
             justify-content: center;
+        }
+    }
+}
+.sixth__screen {
+    .content {
+        padding-top: 111px;
+    }
+    .screen__title{
+        margin-bottom: 75px;
+    }
+    .question__list li{
+        margin: 20px 0;
+    }
+    .question__item {
+        .question__answer {
+            display: none;
+            transition: display 0.5s ease-in-out;
+
+        }
+        label {
+            display: block;
+            position: relative;
+            &::before {
+                top: 5px;
+                content: "";
+                width: 10px;
+                height: 10px;
+                left: -15px;
+                border-right: 2px solid #2B56F5;
+                border-bottom: 2px solid #2B56F5;
+                position: absolute;
+                transform: rotate(-45deg);
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+        input {
+            position: absolute;
+            left: -999999px;
+            z-index: -1000;
+
+            &:checked {
+                + label::before {
+                    transform: rotate(45deg);
+                }
+                + label .question__text{
+                    color: #2B56F5;
+                }
+                + label .question__answer {
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -654,6 +709,15 @@ i.icon {
     }
     &.nfc {
         background: url("../img/onw/Group 5150.svg") 0% 0% no-repeat;
+    }
+    &.trade {
+        background: url("../img/onw/Group 5116.svg") 0% 0% no-repeat;
+    }
+    &.manage {
+        background: url("../img/onw/Group 5117.svg") 0% 0% no-repeat;
+    }
+    &.observe {
+        background: url("../img/onw/Group 5145.svg") 0% 0% no-repeat;
     }
     &:hover {
         filter: invert(66%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
