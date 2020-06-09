@@ -69,6 +69,67 @@
         background: $orange;
     }
 }
+
+.drop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 376px;
+    height: 56px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 16px #00000059;
+    border-radius: 28px;
+    opacity: 1;
+    &:hover{
+        background-color: $yellow;
+    }
+}
+
+.drop__text {
+    font: Medium 16px/24px Roboto;
+    letter-spacing: 0px;
+    color: #1f333d;
+    opacity: 1;
+}
+
+.drop__list {
+    display: none;
+    width: 260px;
+    height: 128px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 16px #00000059;
+    border-radius: 6px;
+    a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+#ddn{
+    position: absolute;
+    z-index: -1000;
+    left: -50000px;
+    &:checked + .drop__list{
+        display: block;
+    }
+}
+// .drop .drop__list {}
+.link:hover + .drop__list {
+    display: block;
+}
+
+.drop__button {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background: #000000 0% 0% no-repeat padding-box;
+    opacity: 0.1;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover{
+        background-color: $yellow;
+    }
+}
+
 main {
     padding-bottom: 61px;
 }
@@ -170,7 +231,7 @@ main {
     .screen__cont__image {
         width: 968px;
         height: 856px;
-        @include setBackgroundImage("../img/onw/phone-top-view-v2-1x@2x.png", contain);
+        @include setBackgroundImage("../img/onw/phone-top-view-v3-1x@2x.png", contain);
     }
 }
 
@@ -572,17 +633,16 @@ main {
     .content {
         padding-top: 111px;
     }
-    .screen__title{
+    .screen__title {
         margin-bottom: 75px;
     }
-    .question__list li{
+    .question__list li {
         margin: 20px 0;
     }
     .question__item {
         .question__answer {
             display: none;
             transition: display 0.5s ease-in-out;
-
         }
         label {
             display: block;
@@ -593,8 +653,8 @@ main {
                 width: 10px;
                 height: 10px;
                 left: -15px;
-                border-right: 2px solid #2B56F5;
-                border-bottom: 2px solid #2B56F5;
+                border-right: 2px solid #2b56f5;
+                border-bottom: 2px solid #2b56f5;
                 position: absolute;
                 transform: rotate(-45deg);
                 transition: transform 0.5s ease-in-out;
@@ -609,8 +669,8 @@ main {
                 + label::before {
                     transform: rotate(45deg);
                 }
-                + label .question__text{
-                    color: #2B56F5;
+                + label .question__text {
+                    color: #2b56f5;
                 }
                 + label .question__answer {
                     display: block;
