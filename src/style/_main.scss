@@ -327,7 +327,7 @@ main {
     .screen__cont__image {
         width: 968px;
         height: 856px;
-        @include setBackgroundImage("../img/onw/phone-top-view-v3-1x@2x.png", contain);
+        @include setBackgroundImage("../img/onw/phone-top-view-v4-dited@2x.png", contain);
     }
 }
 
@@ -509,6 +509,30 @@ main {
 }
 
 .foth__screen {
+    .background__figure_22 {
+        position: absolute;
+        top: 2045px;
+        left: 49%;
+        z-index: 1;
+        width: 94px;
+        height: 64px;
+        background: url("../img/onw/Path 5918.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
+    }
+    .background__figure_11 {
+        position: absolute;
+        top: 1740px;
+        left: -810px;
+        z-index: 1;
+        width: 1203px;
+        height: 1203px;
+        background: url("../img/onw/Rectangle 3772.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
+        opacity: 0.5;
+    }
+    // .background__figure_2 {
+
+    // }
     .background__figure_1 {
         position: absolute;
         top: 561px;
@@ -516,7 +540,8 @@ main {
         z-index: 1;
         width: 323px;
         height: 294px;
-        background: url("../img/onw/NoPath - Copy (18).png") 0% 0% no-repeat padding-box;
+        background: url("../img/onw/shutterstock_658232353@2x.png") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .background__figure_2 {
@@ -527,6 +552,7 @@ main {
         width: 264px;
         height: 216px;
         background: url("../img/onw/Path 6022.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .background__figure_3 {
@@ -537,6 +563,7 @@ main {
         width: 96px;
         height: 74px;
         background: url("../img/onw/Path 6024.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .background__figure_4 {
@@ -546,7 +573,8 @@ main {
         z-index: 1;
         width: 338px;
         height: 312px;
-        background: url("../img/onw/NoPath - Copy (30).png") 0% 0% no-repeat padding-box;
+        background: url("../img/onw/tim-evans-Uf-c4u1usFQ-unsplash@2x.png") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .background__figure_5 {
@@ -558,6 +586,7 @@ main {
         height: 250px;
         transform: matrix(0.41, -0.91, 0.91, 0.41, 0, 0);
         background: url("../img/onw/Path 6023.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .background__figure_6 {
@@ -567,17 +596,19 @@ main {
         z-index: 1;
         width: 417px;
         height: 319px;
-        background: url("../img/onw/NoPath - Copy (31).png") 0% 0% no-repeat padding-box;
+        background: url("../img/onw/data-recovery@2x.png") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .background__figure_7 {
         position: absolute;
-        top: 1634px;
+        top: 1377px;
         left: 46.14%;
         z-index: 1;
         width: 148px;
         height: 169px;
         background: url("../img/onw/Path 5918.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
     }
 
     .screen_action.first {
@@ -669,13 +700,13 @@ main {
                     background: url("../img/onw/Group 5313.svg") 0% 0% no-repeat;
                 }
                 &:nth-child(6) .action__item_img {
-                    background: url("../img/onw/Group 5311.svg") 0% 0% no-repeat;
+                    background: url("../img/onw/Group 5315.svg") 0% 0% no-repeat;
                 }
                 &:nth-child(7) .action__item_img {
-                    background: url("../img/onw/Group 5316.svg") 0% 0% no-repeat;
+                    background: url("../img/onw/Group 5311.svg") 0% 0% no-repeat;
                 }
                 &:nth-child(8) .action__item_img {
-                    background: url("../img/onw/Group 3715.svg") 0% 0% no-repeat;
+                    background: url("../img/onw/Group 5316.svg") 0% 0% no-repeat;
                 }
                 &:nth-child(9) .action__item_img {
                     background: url("../img/onw/Group 5317.svg") 0% 0% no-repeat;
@@ -692,6 +723,37 @@ main {
 }
 
 .fifth__screen {
+    // .background__figure_31,
+    // .background__figure_32{
+
+    // }
+    .background__circle_4 {
+        position: absolute;
+        top: 850px;
+        left: 46.14%;
+        z-index: 1;
+        width: 148px;
+        height: 169px;
+        background: url("../img/onw/Path 5913.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
+    }
+    .background__figure_14,
+    .background__figure_15 {
+        position: absolute;
+        top: 330px;
+        right: -1100px;
+        z-index: 1;
+        width: 1203px;
+        height: 1203px;
+        background: url("../img/onw/Rectangle 3772.svg") 0% 0% no-repeat padding-box;
+        background-size: contain;
+        opacity: 0.5;
+    }
+    .background__figure_15 {
+        top: 1330px;
+        right: unset;
+        left: -1100px;
+    }
     .content {
         padding-top: 464px;
     }
@@ -726,6 +788,7 @@ main {
 
         &.second {
             flex-direction: row-reverse;
+            margin-top: 300px;
         }
 
         .item__1 {
@@ -772,11 +835,25 @@ main {
             justify-content: center;
         }
     }
+    .global__screen {
+        width: 100%;
+        height: 1112px;
+        background: url("../img/onw/Path 6038.svg") center no-repeat;
+        background-size: contain;
+        margin-top: 393px;
+    }
+    .global__screen_img {
+        width: 100%;
+        height: 1112px;
+        background: url("../img/onw/Pages-layout 2x@2x.png") center no-repeat;
+        background-size: contain;
+    }
 }
 
 .sixth__screen {
     .content {
         padding-top: 111px;
+        padding-bottom: 225px;
     }
 
     .screen__title {
@@ -788,25 +865,42 @@ main {
     }
 
     .question__list li {
-        margin: 20px 0;
+        margin: 8px 0;
+        padding: 15px 15px 15px 0;
     }
 
     .question__item {
+        width: 580px;
+        min-height: 56px;
+        border-radius: 6px;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        &:hover {
+            background: #f2f8fc 0% 0% no-repeat padding-box;
+            .question__text {
+                color: $blue;
+            }
+        }
         .question__answer {
             display: none;
             transition: display 0.5s ease-in-out;
         }
-
+        .question__text {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+        }
         label {
             display: block;
             position: relative;
-
+            padding-left: 36px;
             &::before {
                 top: 5px;
+                left: 17px;
                 content: "";
                 width: 10px;
                 height: 10px;
-                left: -15px;
                 border-right: 2px solid #2b56f5;
                 border-bottom: 2px solid #2b56f5;
                 position: absolute;
@@ -839,6 +933,44 @@ main {
 
 .seventh__screen {
     .content {
+        padding-bottom: 226px;
+    }
+    .screen__title {
+        font-weight: 900;
+        font-size: 29px;
+        line-height: 35px;
+        margin-bottom: 39px;
+    }
+    .screen_action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .download__links_market {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // .download__links_qr {
+    //     width: 94px;
+    //     height: 94px;
+    //     @include setBackgroundImage("../img/onw/Group 4968.svg");
+    // }
+
+    .download__links_apple {
+        width: 135px;
+        height: 40px;
+        @include setBackgroundImage("../img/onw/Group 5109.svg");
+        margin-bottom: 16px;
+        margin-top: 28px;
+    }
+
+    .download__links_google {
+        width: 135px;
+        height: 40px;
+        @include setBackgroundImage("../img/onw/Group 5110.svg");
     }
 }
 
