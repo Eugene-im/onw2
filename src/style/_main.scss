@@ -124,10 +124,23 @@
     display: block;
     width: 52px;
     height: 52px;
-    background: #000000 0% 0% no-repeat padding-box;
-    opacity: 0.1;
+    background: rgba($color: #000000, $alpha: 0.1) 0% 0% no-repeat padding-box;
     border-radius: 50%;
     cursor: pointer;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: transparent url('../img/onw/ic_shevron_down.svg') 0% 0% no-repeat padding-box;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
 
     &:hover {
         background-color: $yellow;
@@ -198,7 +211,7 @@
 .link:hover+.drop__list {
     display: flex;
     top: 60px;
-    transform: translateX(-35px);
+    transform: translateX(-3px);
 
     &::before {
         right: 0;
@@ -235,6 +248,7 @@ main {
 
     >li a {
         color: inherit;
+        font-weight: 500;
     }
 }
 
@@ -259,7 +273,7 @@ main {
         }
 
         .menu {
-            max-width: 272px;
+            max-width: 362px;
         }
     }
 
@@ -336,13 +350,13 @@ main {
     .download__links_apple {
         width: 135px;
         height: 40px;
-        @include setBackgroundImage("../img/onw/Group 4977.svg");
+        @include setBackgroundImage("../img/onw/Group 4977.svg", unset);
     }
 
     .download__links_google {
         width: 135px;
         height: 40px;
-        @include setBackgroundImage("../img/onw/Group 4974.svg");
+        @include setBackgroundImage("../img/onw/Group 4974.svg", unset);
     }
 
     .screen__cont__image {
@@ -1248,12 +1262,17 @@ i.icon {
         background: url("../img/onw/Group 5335.svg") 0% 0% no-repeat;
     }
 
+
+}
+
+.item__img i.icon {
+
     &:hover {
-        filter: invert(66%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
+        filter: unset
     }
 
     &:focus {
-        filter: invert(59%) sepia(83%) saturate(1840%) hue-rotate(359deg) brightness(100%) contrast(106%);
+        filter: unset
     }
 }
 

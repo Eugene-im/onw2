@@ -15,7 +15,7 @@ function ready() {
         "iOS";
     [].forEach.call(x, function (el) {
         el.href = '#' + Name;
-        el.innerHTML += ' ' + Name
+        // el.innerHTML += ' ' + Name
     })
     dwnlink.href = '#' + Name;
 }
