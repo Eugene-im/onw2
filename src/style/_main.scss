@@ -361,8 +361,8 @@ main {
 
     .screen__cont__image {
         width: 968px;
-        height: 856px;
-        @include setBackgroundImage("../img/onw/phone-top-view-v4-dited@2x.png", contain);
+        // height: 856px;
+        // @include setBackgroundImage("../img/onw/phone-top-view-v4-dited@2x.png", contain);
     }
 }
 
@@ -904,12 +904,22 @@ main {
             margin-top: 300px;
         }
 
-        .item__1 {
+        .item__1,.item__2,.item__3 {
             position: absolute;
             width: 283px;
             height: 614px;
-            background: transparent url("../img/onw/Wallets.png");
+            background: url("../img/onw/Wallets.png");
             background-size: contain;
+            display: none;
+            &.visible{
+                display: block;
+            }
+        }
+        .item__2 {
+            background: url("../img/onw/dashboard@2x.png");
+        }
+        .item__3 {
+            background: url("../img/onw/Shopping\ opened\ card@2x.png");
         }
     }
 
