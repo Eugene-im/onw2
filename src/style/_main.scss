@@ -417,11 +417,11 @@ main {
     }
 
     .action__item_description {
-        font-weight: 400;
-        font-size: 16px;
+        font-weight: 500;
+        font-size: 20px;
         line-height: 24px;
         color: $black;
-        max-width: 580px;
+        max-width: 784px;
         width: 100%;
     }
 }
@@ -837,7 +837,7 @@ main {
 
     .background__circle_4 {
         position: absolute;
-        top: 926px;
+        top: 971px;
         left: 46.14%;
         z-index: 1;
         width: 148px;
@@ -940,12 +940,22 @@ main {
         .item__description {
             max-width: 476px;
             width: 100%;
+            div{
+                margin-top: 11px;
+            }
+            h4{
+                font-size: 20px;
+            }
         }
 
         .item__img {
             flex: 1 0 auto;
             display: flex;
             justify-content: center;
+            margin-right: 14px;
+            .icon{
+                transform: translateY(-4px);
+            }
         }
     }
 
