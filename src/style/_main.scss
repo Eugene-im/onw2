@@ -904,7 +904,7 @@ main {
             margin-top: 300px;
         }
 
-        .item__1,.item__2,.item__3 {
+        .item__1,.item__2,.item__3,.item__4,.item__5,.item__6,.item__7 {
             position: absolute;
             width: 283px;
             height: 614px;
@@ -915,11 +915,13 @@ main {
                 display: block;
             }
         }
-        .item__2 {
+        .item__1,.item__2 {
             background: url("../img/onw/dashboard@2x.png");
+            background-size: contain;
         }
-        .item__3 {
+        .item__3,.item__5 {
             background: url("../img/onw/Shopping\ opened\ card@2x.png");
+            background-size: contain;
         }
     }
 

@@ -28,12 +28,12 @@ document.addEventListener('click', function (e) {
         document.querySelectorAll('.drop__button + .drop__list')[0].classList.toggle('visible')
     }
 })
-document.addEventListener('mouseover', function (e) {
-    console.log(e.target)
-    if (e.target.classList.contains('item__hover') && !(document.getElementsByClassName('.item__' + e.target.getAttribute(hattr))[0].classList.contains('visible'))) {
-        document.getElementsByClassName('.item__' + e.target.id)[0].classList.toggle('visible')
-    }
-})
+// document.addEventListener('mouseover', function (e) {
+//     console.log(e.target)
+//     if (e.target.classList.contains('item__hover') && !(document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.contains('visible'))) {
+//         document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
+//     }
+// })
 //or
 
 // function getOS() {
