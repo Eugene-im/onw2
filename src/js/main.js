@@ -14,6 +14,7 @@ function ready() {
     if (navigator.userAgent.indexOf("like Mac") != -1) Name =
         "iOS";
     dwnlink.href = '#' + Name;
+    // dwnlink.inneRHTML = '#' + Name;
 }
 
 document.addEventListener('click', function (e) {
