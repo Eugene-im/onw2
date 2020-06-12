@@ -7,13 +7,6 @@
     display: block;
     width: 128px;
     height: 24px;
-    // font-weight: 700;
-    // font-size: 28px;
-    // line-height: 32px;
-    // letter-spacing: 0px;
-    // color: $white0;
-    // text-transform: lowercase;
-    // opacity: 1;
     @include setBackgroundImage("../img/onw/Group 5332.svg", contain);
 }
 
@@ -188,8 +181,6 @@
         height: 24px;
         margin-right: 16px;
         filter: invert(85%) sepia(11%) saturate(2089%) hue-rotate(156deg) brightness(92%) contrast(86%);
-        // filter: invert(0%) sepia(0%) saturate(10%) hue-rotate(181deg) brightness(95%) contrast(100%);
-        // filter: brightness(0) invert(0);
     }
 
     a {
@@ -361,8 +352,6 @@ main {
 
     .screen__cont__image {
         width: 968px;
-        // height: 856px;
-        // @include setBackgroundImage("../img/onw/phone-top-view-v4-dited@2x.png", contain);
     }
 }
 
@@ -572,9 +561,6 @@ main {
         opacity: 0.5;
     }
 
-    // .background__figure_2 {
-
-    // }
     .background__figure_1 {
         position: absolute;
         top: 561px;
@@ -712,7 +698,6 @@ main {
 
         &.third {
             display: flex;
-            // min-width: 800px;
             width: 100%;
             align-items: center;
             justify-content: center;
@@ -720,7 +705,6 @@ main {
 
             .action__item {
                 display: flex;
-                // opacity: 0.4;
                 align-items: center;
 
                 .action__item_img {
