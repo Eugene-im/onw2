@@ -47,7 +47,7 @@
 .screen__page {
     position: relative;
 
-    & > .content {
+    &>.content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -103,6 +103,7 @@
         }
     }
 }
+
 .drop__wrap {
     position: relative;
     display: flex;
@@ -148,21 +149,25 @@
         background-color: $yellow;
     }
 }
+
 .drop__list_wrap {
     position: absolute;
     top: 0;
     z-index: 2;
     display: none;
+
     &:hover {
         display: flex;
         flex-direction: column;
     }
+
     &.visible {
         display: flex;
         right: 0;
         top: 60px;
     }
 }
+
 .drop__list {
     display: flex;
     flex-direction: column;
@@ -207,8 +212,9 @@
         }
     }
 }
-.link + .drop__list_wrap:hover,
-.link:hover + .drop__list_wrap {
+
+.link+.drop__list_wrap:hover,
+.link:hover+.drop__list_wrap {
     display: block;
     top: 35px;
     transform: translateX(-3px);
@@ -254,7 +260,7 @@ main {
     width: 100%;
     justify-content: space-between;
 
-    > li a {
+    >li a {
         color: inherit;
         font-weight: 500;
     }
@@ -779,6 +785,7 @@ main {
 }
 
 .fifth__screen {
+
     .background__figure_31,
     .background__figure_33 {
         position: absolute;
@@ -822,23 +829,28 @@ main {
         right: 22%;
         left: unset;
     }
+
     .background__figure_31 {
         left: -15%;
         top: 53%;
     }
+
     .background__figure_32 {
         top: 21%;
         left: unset;
     }
+
     .background__figure_33 {
         right: -8%;
         left: unset;
         top: 48%;
     }
+
     .background__figure_34 {
         top: 21%;
         right: unset;
     }
+
     .background__figure_11 {
         position: absolute;
         top: 1740px;
@@ -907,6 +919,7 @@ main {
                 justify-content: center;
                 position: relative;
                 z-index: 5;
+
                 &::after {
                     content: "";
                     width: 296px;
@@ -946,15 +959,18 @@ main {
             background: url("../img/onw/Wallets.png");
             background-size: contain;
             display: none;
+
             &.visible {
                 display: block;
             }
         }
+
         .item__1,
         .item__2 {
             background: url("../img/onw/dashboard@2x.png");
             background-size: contain;
         }
+
         .item__3,
         .item__5 {
             background: url("../img/onw/Shopping\ opened\ card@2x.png");
@@ -989,9 +1005,11 @@ main {
         .item__description {
             max-width: 476px;
             width: 100%;
+
             div {
                 margin-top: 11px;
             }
+
             h4 {
                 font-size: 20px;
             }
@@ -1002,6 +1020,7 @@ main {
             display: flex;
             justify-content: center;
             margin-right: 14px;
+
             .icon {
                 transform: translateY(-4px);
             }
@@ -1022,6 +1041,7 @@ main {
         z-index: 1;
         // transform: translateX(-25%);
     }
+
     .global__screen_img_back {
         width: 1920px;
         position: absolute;
@@ -1032,6 +1052,7 @@ main {
 }
 
 .sixth__screen {
+
     .background__figure_43,
     .background__figure_44,
     .background__figure_45 {
@@ -1044,6 +1065,7 @@ main {
         background: url("../img/onw/Path 5933.svg") 0% 0% no-repeat padding-box;
         background-size: contain;
     }
+
     .background__figure_43 {
         left: 0;
         right: 0;
@@ -1082,7 +1104,7 @@ main {
         max-width: 580px;
     }
 
-    .question__list li {
+    .question__list label {
         margin: 8px 0;
         padding: 15px 15px 15px 0;
     }
@@ -1139,16 +1161,24 @@ main {
             z-index: -1000;
 
             &:checked {
-                + label::before {
+                +label::before {
                     transform: rotate(45deg);
                 }
 
-                + label .question__text {
+                +label .question__text {
                     color: #2b56f5;
                 }
 
-                + label .question__answer {
+                +label .question__answer {
                     display: block;
+                }
+
+                +label {
+                    width: 580px;
+                    height: 142px;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 4px 32px #004D9926;
+                    border-radius: 6px;
                 }
             }
         }
@@ -1210,14 +1240,17 @@ main {
         @include setBackgroundImage("../img/onw/Group 5110.svg");
     }
 }
+
 main {
     position: relative;
 }
+
 .background__wave_3 {
     position: absolute;
     bottom: -10px;
     width: 100%;
 }
+
 footer {
     background-color: $blue;
     position: relative;
@@ -1242,6 +1275,7 @@ footer {
         opacity: 0.75;
     }
 
+    .footer__text__powered,
     .footer__text__copyright,
     .footer__text__privacy_policy {
         font-size: 12px;
@@ -1256,12 +1290,14 @@ footer {
         color: $white0;
     }
 }
+
 // .question__item,
 .item__hover {
-    > * {
+    >* {
         pointer-events: none;
     }
 }
+
 .overflow1,
 .overflow {
     display: none;
@@ -1277,6 +1313,7 @@ footer {
     // margin-bottom: 16px;
     z-index: 55;
     transition: display 0.4s ease-in-out;
+
     &.visible {
         display: flex;
         align-items: center;
@@ -1362,55 +1399,69 @@ i.icon {
         .background__figure_1 {
             left: 8.85%;
         }
+
         .background__figure_2 {
             left: -5.28%;
         }
+
         .background__figure_4 {
             left: 72.43%;
         }
+
         .background__figure_5 {
             left: 90.43%;
         }
+
         .background__figure_6 {
             left: 4.85%;
         }
     }
+
     .sixth__screen {
         .background__figure_44 {
             left: -12%;
         }
+
         .background__figure_45 {
             right: -24%;
         }
     }
 }
+
 @media (max-width: 1280px) {
     .foth__screen {
         .background__figure_1 {
             left: 1.85%;
         }
+
         .background__figure_2 {
             left: -20.28%;
         }
+
         .background__figure_4 {
             left: 72.43%;
         }
+
         .background__figure_5 {
             left: 94.43%;
         }
+
         .background__figure_6 {
             left: -9.15%;
         }
     }
+
     .sixth__screen {
         .background__figure_44 {
             left: -35%;
         }
+
         .background__figure_45 {
             right: -40%;
         }
     }
 }
+
 @media (max-width: $tablet) {
     .overflow1 {
         display: flex;

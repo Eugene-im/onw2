@@ -3,21 +3,19 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
     var x = document.getElementsByClassName('dwn');
     var Name = "Unknown OS";
-    if (navigator.userAgent.indexOf("Win") != -1) Name =
-        "Windows OS";
-    if (navigator.userAgent.indexOf("Mac") != -1) Name =
-        "Macintosh";
-    if (navigator.userAgent.indexOf("Linux") != -1) Name =
-        "Linux OS";
+    if (navigator.userAgent.indexOf("Win") != -1) Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
+    if (navigator.userAgent.indexOf("Mac") != -1) Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
+    if (navigator.userAgent.indexOf("Linux") != -1) Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
     if (navigator.userAgent.indexOf("Android") != -1) Name =
         "Android OS";
     if (navigator.userAgent.indexOf("like Mac") != -1) Name =
         "iOS";
+
     [].forEach.call(x, function (el) {
-        el.href = '#' + Name;
+        el.href = Name;
         // el.innerHTML += ' ' + Name
     })
-    dwnlink.href = '#' + Name;
+    dwnlink.href = Name;
 }
 
 document.addEventListener('click', function (e) {
@@ -46,16 +44,15 @@ document.getElementsByClassName('overflow')[0].addEventListener('click', functio
 //         this.classList.toggle('background')
 //     }
 // })
-// document.addEventListener('mouseover', function (e) {
-//     // console.log(e.target)
-//     if (e.target.classList.contains('item__hover') && !(document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.contains('visible'))) {
-//         console.log(e.target.getAttribute('hattr'));
-//         document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
-//     } else if (e.target.classList.contains('item__hover')) {
-//         console.log(e.target.getAttribute('hattr'));
-//         document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
-//     }
-// })
+function hoverItem(e){
+    if (e.target.classList.contains('item__hover') && !(document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.contains('visible'))) {
+        document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
+    } else if (e.target.classList.contains('item__hover')) {
+        document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
+    }
+}
+actionItem1.addEventListener('mouseover', hoverItem);
+actionItem2.addEventListener('mouseover', hoverItem);
 //or
 
 // function getOS() {
