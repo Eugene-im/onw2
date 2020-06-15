@@ -23,10 +23,17 @@ function ready() {
 document.addEventListener('click', function (e) {
     // console.log(e.target)
     if (e.target.classList.contains('drop__button')) {
-        document.querySelectorAll('.drop__button + .drop__list')[0].classList.toggle('visible')
-    } else if (document.querySelectorAll('.drop__button + .drop__list')[0].classList.contains('visible')) {
-        document.querySelectorAll('.drop__button + .drop__list')[0].classList.toggle('visible')
+        document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
+    } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
+        document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
     }
+})
+playvid.addEventListener('click', function(){
+    document.getElementsByClassName('overflow')[0].classList.toggle('visible')
+})
+document.getElementsByClassName('overflow')[0].addEventListener('click', function(e){
+    e.stopPropagation();
+    this.classList.toggle('visible')
 })
 // document.addEventListener('mouseover', function (e) {
 //     console.log(e.target)

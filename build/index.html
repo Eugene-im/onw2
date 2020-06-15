@@ -20,9 +20,11 @@
             <ul class="menu">
               <li><a href="#">About</a></li>
               <li class="link"><a href="#">Download</a></li>
-              <div class="drop__list dd">
-                <a href="#" download="" ><i class="icon os windows"></i>OnWallet for Windows</a>
-                <a href="#" download="" ><i class="icon os macos"></i>OnWallet for macOS X</a>
+              <div class="drop__list_wrap">
+                <div class="drop__list dd">
+                  <a href="#" download=""><i class="icon os windows"></i> OnWallet for Windows</a>
+                  <a href="#" download=""><i class="icon os macos"></i>OnWallet for macOS X</a>
+                </div>
               </div>
               <li><a href="http://alpha.onwallet.com/#/login">Log In</a></li>
               <li><a href="http://alpha.onwallet.com/#/register">Register</a></li>
@@ -34,14 +36,17 @@
           <div class="first__screen_cont">
             <div class="screen__cont__action">
               <h1 class="screen__cont_title">Crypto & Digital Wallet, Redefined.</h1>
-              <div class="drop">
-                <a id="dwnlink" href="#" download="" class="drop__text">Download OnWallet for Windows</a>
-                <div class="drop__button" for="ddn">
-                  <!-- <i class="icon arrow"></i> -->
+              <div class="drop__wrap">
+                <div class="drop">
+                  <a id="dwnlink" href="#" download="" class="drop__text">Download OnWallet for Windows</a>
                 </div>
-                <div class="drop__list dd">
-                  <a href="#" download="" ><i class="icon os windows"></i> OnWallet for Windows</a>
-                  <a href="#" download="" ><i class="icon os macos"></i>OnWallet for macOS X</a>
+      
+                <div class="drop__button" for="ddn"></div>
+                <div class="drop__list_wrap">
+                  <div class="drop__list dd">
+                    <a href="#" download=""><i class="icon os windows"></i> OnWallet for Windows</a>
+                    <a href="#" download=""><i class="icon os macos"></i>OnWallet for macOS X</a>
+                  </div>
                 </div>
               </div>
               <div class="download__links">
@@ -63,9 +68,10 @@
             <!-- <div > -->
           </div>
         </div>
+        <img src='./img/onw/Path 5917.svg' alt="" class="background__wave_1" />
       </div>
       <div class="second__screen screen__page">
-          <div class="background__wave_1"></div>
+          <!-- <div class="background__wave_1"></div> -->
           <div class="background__figure_1"></div>
           <div class="background__figure_2"></div>
           <!-- <div class="background__figure_3"></div> -->
@@ -118,7 +124,7 @@
           </div>
           <div class="screen_action video__action_block">
             <div class="background__for_video"></div>
-            <button class="button_play_video"></button>
+            <button id='playvid' class="button_play_video"></button>
             <div class="button_play_video_text">Watch to discover more</div>
           </div>
           <div class="screen_action">
@@ -165,7 +171,7 @@
           </div>
       
           <div class="screen_action first">
-              <div class="background__wave_2"></div>
+              <img src="./img/onw/Path 5935.svg" alt="" class="background__wave_2"/>
               <div class="screen_action__img"></div>
           </div>
           <div class="content">
@@ -242,10 +248,10 @@
           </div>
       </div>
       <div class="fifth__screen screen__page">
-          <div class="background__figure_31"></div>
-          <div class="background__figure_32"></div>
-          <div class="background__figure_33"></div>
-          <div class="background__figure_34"></div>
+      
+          <div class="background__figure_15"></div>
+          <div class="background__figure_14"></div>
+      
           <div class="content">
               <h2 class="screen__title">
                   Rich Functionality
@@ -253,6 +259,8 @@
               <div class="screen_action">
                   <div class="action__item first">
                       <div class="action__item_img">
+                          <div class="background__figure_31"></div>
+                          <div class="background__figure_32"></div>
                           <div class="action__item_img_phone">
                               <div class="item__1 visible"></div>
                               <div class="item__2"></div>
@@ -309,9 +317,10 @@
                       </div>
                   </div>
                   <div class="background__circle_4"></div>
-                  <div class="background__figure_14"></div>
                   <div class="action__item second">
                       <div class="action__item_img">
+                          <div class="background__figure_33"></div>
+                          <div class="background__figure_34"></div>
                           <div class="action__item_img_phone">
                               <div class="item__5 visible"></div>
                               <div class="item__6"></div>
@@ -364,7 +373,6 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="background__figure_15"></div>
       
                   <div class="background__circle_5"></div>
                   <!-- {/* <div class="action__item">
@@ -412,7 +420,8 @@
               </div>
           </div>
           <div class="global__screen">
-              <div class="global__screen_img"></div>
+              <img src="./img/onw/Path 6038.svg" alt="" class="global__screen_img">
+              <img src="./img/onw/Pages-layout 2x@2x.png" alt="" class="global__screen_img_back">
           </div>
       </div>
       <div class="sixth__screen screen__page">
@@ -536,9 +545,9 @@
               </div>
           </div>
       </div>
+      <img src="./img/onw/Path 5946.svg" alt="" class="background__wave_3">
     </main>
     <footer>
-        <div class="background__wave_3"></div>
         <div class="content">
           <div class="fline">
             <a href="/" class="logo"></a>
@@ -564,6 +573,9 @@
       </footer>
   </div>
   <div class="overflow">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKwa-BqnJDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="overflow1">
     <div class="no_design">
       design in progress
     </div>
