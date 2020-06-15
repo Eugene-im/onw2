@@ -26,18 +26,33 @@ document.addEventListener('click', function (e) {
         document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
     } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
         document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
+    } else if (e.target.classList.contains('question__item')){
+        console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
+        if(e.target.getElementsByTagName('input')[0].getAttribute('checked')){
+            this.classList.toggle('background')
+        }
     }
 })
-playvid.addEventListener('click', function(){
+playvid.addEventListener('click', function () {
     document.getElementsByClassName('overflow')[0].classList.toggle('visible')
 })
-document.getElementsByClassName('overflow')[0].addEventListener('click', function(e){
+document.getElementsByClassName('overflow')[0].addEventListener('click', function (e) {
     e.stopPropagation();
     this.classList.toggle('visible')
 })
+
+// document.getElementsByClassName('question__item').addEventListener('click', function(e){
+//     if(e.target.getElementsByTagName('input')[0].getAttribute('checked')){
+//         this.classList.toggle('background')
+//     }
+// })
 // document.addEventListener('mouseover', function (e) {
-//     console.log(e.target)
+//     // console.log(e.target)
 //     if (e.target.classList.contains('item__hover') && !(document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.contains('visible'))) {
+//         console.log(e.target.getAttribute('hattr'));
+//         document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
+//     } else if (e.target.classList.contains('item__hover')) {
+//         console.log(e.target.getAttribute('hattr'));
 //         document.getElementsByClassName('.item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
 //     }
 // })

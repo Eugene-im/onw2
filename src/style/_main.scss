@@ -1117,7 +1117,7 @@ main {
         label {
             display: block;
             position: relative;
-            padding-left: 36px;
+            padding-left: 50px;
 
             &::before {
                 top: 5px;
@@ -1256,8 +1256,14 @@ footer {
         color: $white0;
     }
 }
-
-.overflow1,.overflow {
+// .question__item,
+.item__hover {
+    > * {
+        pointer-events: none;
+    }
+}
+.overflow1,
+.overflow {
     display: none;
     position: fixed;
     width: 100vw;
@@ -1271,7 +1277,7 @@ footer {
     // margin-bottom: 16px;
     z-index: 55;
     transition: display 0.4s ease-in-out;
-    &.visible{
+    &.visible {
         display: flex;
         align-items: center;
         justify-content: center;
