@@ -382,7 +382,7 @@ main {
     }
 
     .screen__cont__image {
-        width: 968px;
+        width: 1021px;
     }
 }
 
@@ -735,7 +735,7 @@ main {
                     width: 48px;
                     height: 48px;
                     margin-right: 10px;
-                    background-size: contain;
+                    // background-size: contain;
                 }
 
                 &:nth-child(1) .action__item_img {
@@ -1056,7 +1056,7 @@ main {
     .background__figure_44,
     .background__figure_45 {
         position: absolute;
-        top: 50px;
+        top: 116px;
         left: 45%;
         z-index: 1;
         width: 154px;
@@ -1458,15 +1458,24 @@ i.icon {
         margin-top: 11px;
         margin-bottom: 32px;
         text-align: center;
+        font-weight: 900;
+        font-size: 37px;
+        line-height: 44px;
     }
     .sub_title{
         margin-bottom: 24px;
         text-align: left;
+        font-weight: 900;
+        font-size: 29px;
+        line-height: 35px;
     }
     .sub_title_text{
         margin-bottom: 16px;
         margin-top: 24px;
         text-align: left;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
     }
     .privacy__punkt_list{
         margin-top: 29px;
