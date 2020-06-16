@@ -24,9 +24,9 @@ document.addEventListener('click', function (e) {
         document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
     } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
         document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
-    } else if (e.target.classList.contains('question__item')){
+    } else if (e.target.classList.contains('question__item')) {
         console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
-        if(e.target.getElementsByTagName('input')[0].getAttribute('checked')){
+        if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
             this.classList.toggle('background')
         }
     }
@@ -40,16 +40,22 @@ document.getElementsByClassName('overflow')[0].addEventListener('click', functio
 })
 
 // document.getElementsByClassName('question__item').addEventListener('click', function(e){
-//     if(e.target.getElementsByTagName('input')[0].getAttribute('checked')){
-//         this.classList.toggle('background')
-//     }
-// })
-function hoverItem(e){
-    if (e.target.classList.contains('item__hover') && !(document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.contains('visible'))) {
-        document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
-    } else if (e.target.classList.contains('item__hover')) {
+q11.click = function (e) {
+    console.log(e.target);
+    this.classList.toggle('background')
+}
+function hoverItem(e) {
+    if (e.target.classList.contains('item__hover')) {
+        console.log('1');
+        var elh = document.querySelectorAll('' + this.id + '> item__h1');
+        [].forEach.call(elh, function (el) {
+            el.classList.remove('visible');
+            console.log('1');
+        });
         document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
     }
 }
-actionItem1.addEventListener('mouseover', hoverItem);
-actionItem2.addEventListener('mouseover', hoverItem);
+actionItem1.onmouseover = hoverItem;
+actionItem1.onmouseout = hoverItem;
+actionItem2.onmouseover = hoverItem;
+actionItem2.onmouseout = hoverItem;
