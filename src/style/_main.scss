@@ -223,7 +223,7 @@
 .link+.drop__list_wrap:hover,
 .link:hover+.drop__list_wrap {
     display: block;
-    top: 35px;
+    top: 38px;
     transform: translateX(-3px);
     height: 150px;
     position: absolute;
@@ -273,6 +273,9 @@ main {
         color: inherit;
         font-weight: 500;
     }
+    >li:hover a {
+        color: $yellow;
+    }
 }
 
 .first__screen {
@@ -293,7 +296,8 @@ main {
 
     header {
         z-index: 3;
-        position: relative;
+        position: sticky;
+        top: 0;
 
         .content {
             min-height: 72px;
@@ -591,7 +595,7 @@ main {
         height: 1203px;
         background: url("../img/onw/Rectangle 3772.svg") 0% 0% no-repeat padding-box;
         background-size: contain;
-        opacity: 0.5;
+        // opacity: 0.5;
     }
 
     .background__figure_1 {
@@ -939,7 +943,7 @@ main {
         height: 1203px;
         background: url("../img/onw/Rectangle 3772.svg") 0% 0% no-repeat padding-box;
         background-size: contain;
-        opacity: 0.5;
+        // opacity: 0.5;
     }
 
     .background__circle_4 {
@@ -1364,13 +1368,14 @@ footer {
 
     .content .fline,
     .footer__text__privacy {
-        min-height: 72px;
+        min-height: 123px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .footer__text__privacy {
+        min-height: 135px;
         align-items: flex-end;
         flex-direction: column;
         justify-content: flex-start;
@@ -1495,7 +1500,7 @@ i.icon {
     }
 
     &.trade {
-        background: url("../img/onw/Group 5116.svg") 0% 0% no-repeat;
+        background: url("../img/onw/Group 5145.svg") 0% 0% no-repeat;
     }
 
     &.manage {
@@ -1524,7 +1529,8 @@ i.icon {
 
     header {
         z-index: 3;
-        position: relative;
+        position: sticky;
+        top: 0;
 
         .content {
             min-height: 72px;
