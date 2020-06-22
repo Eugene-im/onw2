@@ -49,7 +49,7 @@
 .screen__page {
     position: relative;
 
-    &>.content {
+    & > .content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -220,8 +220,8 @@
     }
 }
 
-.link+.drop__list_wrap:hover,
-.link:hover+.drop__list_wrap {
+.link + .drop__list_wrap:hover,
+.link:hover + .drop__list_wrap {
     display: block;
     top: 38px;
     transform: translateX(-3px);
@@ -259,7 +259,7 @@
 }
 
 main {
-    padding-bottom: 61px;
+    // padding-bottom: 61px;
 }
 
 .menu {
@@ -269,11 +269,11 @@ main {
     justify-content: space-between;
     max-width: 362px;
 
-    >li a {
+    > li a {
         color: inherit;
         font-weight: 500;
     }
-    >li:hover a {
+    > li:hover a {
         color: $yellow;
     }
 }
@@ -823,7 +823,6 @@ main {
                     }
                 }
 
-
                 .action__item_delimeter {
                     width: 75px;
                     height: 6px;
@@ -844,10 +843,8 @@ main {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    
 
                     &:hover {
-
                         .action__item_img_descr {
                             display: block;
                             position: absolute;
@@ -859,7 +856,6 @@ main {
                         .action__item_img {
                             transform: translateY(-10px);
                         }
-
                     }
                 }
             }
@@ -868,7 +864,6 @@ main {
 }
 
 .fifth__screen {
-
     .background__figure_31,
     .background__figure_33 {
         position: absolute;
@@ -1007,7 +1002,7 @@ main {
 
                 &::after {
                     content: "";
-                    width: 296px;
+                    width: 95%;
                     height: 7px;
                     filter: blur(6px);
                     position: absolute;
@@ -1158,7 +1153,6 @@ main {
 }
 
 .sixth__screen {
-
     .background__figure_43,
     .background__figure_44,
     .background__figure_45 {
@@ -1271,19 +1265,19 @@ main {
             z-index: -1000;
 
             &:checked {
-                +label::before {
+                + label::before {
                     transform: rotate(90deg);
                 }
 
-                +label .question__text {
+                + label .question__text {
                     color: #2b56f5;
                 }
 
-                +label .question__answer {
+                + label .question__answer {
                     display: block;
                 }
 
-                +label {
+                + label {
                     width: 580px;
                     min-height: 142px;
                     background: #ffffff 0% 0% no-repeat padding-box;
@@ -1416,12 +1410,15 @@ footer {
 
     .footer__text__privacy_policy {
         color: $white0;
+        &:hover {
+            color: $yellow;
+        }
     }
 }
 
 // .question__item,
 .item__hover {
-    >* {
+    > * {
         pointer-events: none;
     }
 }
@@ -1541,7 +1538,7 @@ i.icon {
         }
     }
 
-    .menu>li a {
+    .menu > li a {
         color: #1f333d;
     }
 
@@ -1721,7 +1718,6 @@ i.icon {
     }
 
     .second__screen {
-
         .background__figure_1 {
             display: none;
         }
@@ -1740,7 +1736,6 @@ i.icon {
     }
 
     .third__screen {
-
         .fee__item {
             max-width: 130px;
             text-align: center;
@@ -1759,7 +1754,6 @@ i.icon {
     }
 
     .foth__screen {
-
         .background__wave_2 {
             width: 1920px;
         }
@@ -1787,19 +1781,129 @@ i.icon {
             height: 242px;
             top: 1200px;
         }
+        .background__figure_22 {
+            top: 2004px;
+        }
 
         .screen_action.second .action__item {
             max-width: 472px;
         }
-
+        .screen_action.third {
+            overflow-x: auto;
+            overflow-y: visible;
+            justify-content: flex-start;
+            min-height: 148px;
+            margin: 20px auto;
+        }
     }
 
     .fifth__screen {
-
+        .content {
+            padding-top: 186px;
+        }
+        .background__circle_4,
         .background__figure_14,
         .background__figure_15 {
             display: none;
         }
+        .action__item {
+            align-items: flex-start;
+        }
+        .background__figure_32 {
+            left: -147px;
+            width: 366px;
+            height: 426px;
+        }
+        .background__figure_34 {
+            top: -5%;
+            right: -231px;
+        }
+        .action__item.first .action__item_img .action__item_img_phone,
+        .action__item.second .action__item_img .action__item_img_phone {
+            width: 223.23px;
+            height: 461.73px;
+        }
+        .action__item .item__h1 {
+            width: 204.7px;
+            height: 443.23px;
+        }
+        .action__item.first .action__item_img,
+        .action__item.second .action__item_img {
+            flex: 1 0 auto;
+            padding-right: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .action__item_desc {
+            position: relative;
+            z-index: 2;
+        }
+        .action__item.second .action__item_img {
+            padding-left: 24px;
+            padding-right: unset;
+        }
+        .action__item.second {
+            margin-top: 158px;
+        }
+        .global__screen {
+            margin-top: 105px;
+        }
+        .global__screen_img {
+            width: 130%;
+        }
+        .global__screen_img_back {
+            width: 1280px;
+            top: 35px;
+        }
+    }
+    .sixth__screen {
+        .background__figure_43 {
+            top: 85px;
+        }
+        .content {
+            padding-top: 300.47px;
+            padding-bottom: 154px;
+            align-items: flex-start;
+        }
+        .screen__title {
+            align-self: center;
+            margin-bottom: 62px;
+        }
+        .background__figure_44 {
+            width: 266px;
+            height: 268px;
+            right: -50px;
+            left: unset;
+        }
+        .background__figure_45 {
+            width: 425px;
+            height: 240px;
+            top: 829px;
+            right: -123px;
+        }
+    }
+    .seventh__screen {
+        .content {
+            padding-bottom: 173px;
+        }
+        .download__links_market {
+            display: none;
+        }
+        .background__figure_54 {
+            width: 378px;
+            height: 208px;
+            top: -28px;
+        }
+        .screen__title {
+            margin-bottom: 28px;
+        }
+    }
+    footer{
+
+        .footer__text_section{
+        max-width: 348px;
+        } 
+
     }
 }
 
