@@ -8,6 +8,7 @@
     width: 128px;
     height: 24px;
     @include setBackgroundImage("../img/onw/Group 5332.svg", contain);
+    transition: background-image 0.2s ease-in-out;
 }
 
 .content {
@@ -292,16 +293,17 @@
     }
 
     header {
-        z-index: 3;
-        position: sticky;
+        z-index: 6;
+        position: absolute;
+        width: 100%;
         top: 0;
+        transition: background-color 0.2s, box-shadow 0.2s ease-in-out;
         &.sticky{
-                background: #fff;
+                background-color: #fff;
+                box-shadow: 0 4px 32px #004d9926;
                 position: fixed;
-                width: 100%;
-                z-index: 6;
                 .logo{
-                    background-image:  url("../img/onw//Group 5377.svg");
+                    background-image:  url("../img/onw/Group 5377.svg");
                 }
                 .menu{
                     color:$black
@@ -325,6 +327,7 @@
     .first__screen_layer {
         z-index: 2;
         position: relative;
+        padding-top: 72px;
     }
 
     .first__screen_cont {

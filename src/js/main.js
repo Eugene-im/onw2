@@ -25,7 +25,7 @@ document.addEventListener('click', function (e) {
     } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
         document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
     } else if (e.target.classList.contains('question__item')) {
-        console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
+        // console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
         if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
             this.classList.toggle('background')
         }
@@ -39,18 +39,38 @@ document.getElementsByClassName('overflow')[0].addEventListener('click', functio
     this.classList.toggle('visible')
 })
 
-// document.getElementsByClassName('question__item').addEventListener('click', function(e){
-q11.click = function (e) {
-    console.log(e.target);
-    this.classList.toggle('background')
+window.onscroll = function () { stickyHeader() };
+
+var header = document.getElementById("headerSticky");
+var sticky = header.offsetTop;
+
+function stickyHeader() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
 }
+
+// document.querySelectorAll('cb')
+var cbs = document.getElementsByClassName("cb");
+[].forEach.call(cbs, function (el) {
+    el.onchange = cbChange(el);
+})
+function cbChange(obj) {
+    for (var i = 0; i < cbs.length; i++) {
+        cbs[i].checked = false;
+    }
+    obj.checked = true;
+}
+
 function hoverItem(e) {
     if (e.target.classList.contains('item__hover')) {
-        console.log('1');
+        // console.log('1');
         var elh = document.querySelectorAll('' + this.id + '> item__h1');
         [].forEach.call(elh, function (el) {
             el.classList.remove('visible');
-            console.log('1');
+            // console.log('1');
         });
         document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
     }
