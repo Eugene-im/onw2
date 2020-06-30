@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", ready);
 
+var count = 0;
+var timeOut;
+
 function ready() {
     var x = document.getElementsByClassName('dwn');
     var Name = "Unknown OS";
@@ -19,16 +22,19 @@ function ready() {
 }
 
 document.addEventListener('click', function (e) {
-    // console.log(e.target)
-    if (e.target.classList.contains('drop__button')) {
-        document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
-    } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
-        document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
-    } else if (e.target.classList.contains('question__item')) {
-        // console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
-        if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
-            this.classList.toggle('background')
+    var id = e.target.id;
+
+    if (id) {
+        var input = document.getElementById(id);
+        var status = input.checked;
+
+        if (status && !!count) {
+            count--;
+        } else {
+            count++;
         }
+
+        document.getElementById(id).checked = !!count;
     }
 })
 playvid.addEventListener('click', function () {
@@ -39,7 +45,25 @@ document.getElementsByClassName('overflow')[0].addEventListener('click', functio
     this.classList.toggle('visible')
 })
 
-window.onscroll = function () { stickyHeader() };
+function goUp() {
+    var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+
+    if (top > 0) {
+        window.scrollBy(0, -100);
+        timeOut = setTimeout('goUp()', 20);
+    } else clearTimeout(timeOut);
+}
+
+window.onscroll = function () {
+    var scrollElem = document.getElementById("scrollToTop");
+    if (window.pageYOffset > 1000) {
+       scrollElem.style.opacity = "1";
+    } else {
+        scrollElem.style.opacity = "0";
+    }
+
+    stickyHeader();
+};
 
 var header = document.getElementById("headerSticky");
 var sticky = header.offsetTop;
@@ -66,15 +90,16 @@ function cbChange(obj) {
 
 function hoverItem(e) {
     if (e.target.classList.contains('item__hover')) {
-        // console.log('1');
         var elh = document.querySelectorAll('' + this.id + '> item__h1');
+
         [].forEach.call(elh, function (el) {
             el.classList.remove('visible');
-            // console.log('1');
         });
+
         document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
     }
 }
+
 actionItem1.onmouseover = hoverItem;
 actionItem1.onmouseout = hoverItem;
 actionItem2.onmouseover = hoverItem;

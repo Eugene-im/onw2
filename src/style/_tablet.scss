@@ -121,6 +121,12 @@
             justify-content: flex-start;
             min-height: 148px;
             margin: 20px auto;
+            overflow: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
         }
     }
 
@@ -206,7 +212,7 @@
             width: 425px;
             height: 240px;
             top: 829px;
-            right: -123px;
+            right: -210px;
         }
     }
     .seventh__screen {
