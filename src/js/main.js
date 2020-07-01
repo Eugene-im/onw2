@@ -24,6 +24,19 @@ function ready() {
 document.addEventListener('click', function (e) {
     var id = e.target.id;
 
+    if (e.target.classList.contains('drop__button')) {
+        document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
+    } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
+        document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
+    } else if (e.target.classList.contains('question__item')) {
+        // console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
+        if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
+            this.classList.toggle('background')
+        }
+    }
+
+    
+
     if (id) {
         var input = document.getElementById(id);
         var status = input.checked;
@@ -90,13 +103,15 @@ function cbChange(obj) {
 
 function hoverItem(e) {
     if (e.target.classList.contains('item__hover')) {
-        var elh = document.querySelectorAll('' + this.id + '> item__h1');
+        var items = [1, 2, 3, 4, 5, 6, 7];
 
-        [].forEach.call(elh, function (el) {
-            el.classList.remove('visible');
+        [].forEach.call(items, function(item) {
+            if (item == e.target.getAttribute('hattr')) {
+                document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.add('visible')
+            } else {
+                document.getElementsByClassName('item__' + item)[0].classList.remove('visible')
+            }
         });
-
-        document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.toggle('visible')
     }
 }
 
