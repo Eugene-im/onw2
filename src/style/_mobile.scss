@@ -3,6 +3,14 @@
         padding: 16px;
     }
 
+    .mobile-icon {
+        display: flex;
+    }    
+
+    .desktop-icon {
+        display: none;
+    }
+
     .first__screen {
         .background__figure_2 {
             top: 46px;

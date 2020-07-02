@@ -68,14 +68,15 @@ function goUp() {
 }
 
 window.onscroll = function () {
-    var scrollElem = document.getElementById("scrollToTop");
-    if (window.pageYOffset > 1000) {
-       scrollElem.style.opacity = "1";
-    } else {
-        scrollElem.style.opacity = "0";
-    }
-
     stickyHeader();
+
+    // SCROLL UP
+    // var scrollElem = document.getElementById("scrollToTop");
+    // if (window.pageYOffset > 1000) {
+    //     scrollElem.style.opacity = "1";
+    // } else {
+    //     scrollElem.style.opacity = "0";
+    // }
 };
 
 var header = document.getElementById("headerSticky");
@@ -98,7 +99,7 @@ function cbChange(obj) {
     for (var i = 0; i < cbs.length; i++) {
         cbs[i].checked = false;
     }
-    obj.checked = true;
+    // obj.checked = true;
 }
 
 function hoverItem(e) {

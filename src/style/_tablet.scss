@@ -3,6 +3,16 @@
         padding: 20px 24px;
     }
 
+    .drop__list_wrap {
+       right: 0;
+    }
+
+    .drop__list {    
+        &::before {
+            left: 145px !important;
+        }
+    }
+
     .screen__page > .content {
         justify-content: center;
     }
