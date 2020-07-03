@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", ready);
 
 var count = 0;
 var timeOut;
+var collapse = [ "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
 
 function ready() {
     var x = document.getElementsByClassName('dwn');
@@ -34,20 +35,14 @@ document.addEventListener('click', function (e) {
             this.classList.toggle('background')
         }
     }
-
     
 
     if (id) {
-        var input = document.getElementById(id);
-        var status = input.checked;
-
-        if (status && !!count) {
-            count--;
-        } else {
-            count++;
-        }
-
-        document.getElementById(id).checked = !!count;
+        [].forEach.call(collapse, function(item) {
+            if (item !== id) {
+                document.getElementById(item).checked = false;
+            }
+        });
     }
 })
 playvid.addEventListener('click', function () {
@@ -91,16 +86,16 @@ function stickyHeader() {
 }
 
 // document.querySelectorAll('cb')
-var cbs = document.getElementsByClassName("cb");
-[].forEach.call(cbs, function (el) {
-    el.onchange = cbChange(el);
-})
-function cbChange(obj) {
-    for (var i = 0; i < cbs.length; i++) {
-        cbs[i].checked = false;
-    }
-    // obj.checked = true;
-}
+// var cbs = document.getElementsByClassName("cb");
+// [].forEach.call(cbs, function (el) {
+//     el.onchange = cbChange(el);
+// })
+// function cbChange(obj) {
+//     for (var i = 0; i < cbs.length; i++) {
+//         cbs[i].checked = false;
+//     }
+//     // obj.checked = true;
+// }
 
 function hoverItem(e) {
     if (e.target.classList.contains('item__hover')) {
