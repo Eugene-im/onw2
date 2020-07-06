@@ -1,17 +1,20 @@
 @media (max-width: $mobile) {
     .content {
-        padding: 16px;
+        padding: 0 16px;
     }
 
     .mobile-icon {
         display: flex;
-    }    
+    }
 
     .desktop-icon {
         display: none;
     }
 
     .first__screen {
+        .first__screen_layer{
+            padding-top: 40px;
+        }
         .background__figure_2 {
             top: 46px;
             left: -885px;
@@ -25,19 +28,25 @@
         .screen__cont__image {
             width: 525px;
             height: 465px;
+            margin-left: 52px;
         }
         .screen__cont__action {
             max-width: 328px;
             position: relative;
             margin-left: 2%;
+            margin-top: -40px;
         }
         .drop__text {
             padding-left: 20px;
+        }
+        .drop__wrap{
+            margin-bottom: 92px;
         }
         .screen__cont_title {
             font-weight: 900;
             font-size: 36px;
             line-height: 43px;
+            margin-bottom: 19px;
         }
         .background__figure_1 {
             top: -413.96px;
@@ -45,12 +54,27 @@
         }
     }
     .second__screen {
+        .content {
+            padding-bottom: 90px;
+        }
+        .screen__title {
+            margin-top: 50px;
+            margin-bottom: 13px;
+        }
         .action__item_img {
             height: 195px;
+            margin: 27px auto 42px;
         }
     }
     .third__screen {
         padding-bottom: 58px;
+        .btn {
+            margin: 24px auto 0;
+        }
+        .screen__title,
+        .screen_description {
+            margin-bottom: 23px;
+        }
         .block__fee {
             flex-wrap: wrap;
             padding-bottom: 16px;
@@ -77,11 +101,12 @@
             background-repeat: repeat;
         }
         .screen_action .screen_description {
-            margin-top: -50px;
+            margin-top: -55px;
+            margin-bottom: 16px;
         }
     }
     .foth__screen {
-        .screen_action.second{
+        .screen_action.second {
             display: flex;
             flex-direction: column;
             padding-bottom: 148px;
@@ -91,9 +116,15 @@
             }
         }
 
+        .screen_action.third {
+            padding: 0 16px;
+        }
+
         .background__figure_1 {
-            top: 585px;
-            left: -95px;
+            top: 550px;
+            left: -72px;
+            width: 162px;
+            height: 147px;
         }
 
         .background__figure_2 {
@@ -101,45 +132,56 @@
         }
 
         .background__figure_3 {
-            top: 1015px;
-            left: 180px;
+            top: 842px;
+            left: 0;
+            right: 0;
+            margin: auto;
             width: 48px;
             height: 37px;
         }
 
         .background__figure_4 {
-            width: 254px;
-            height: 234px;
-            top: 1120px;
+            width: 169px;
+            height: 156px;
+            top: 914px;
         }
 
         .background__figure_6 {
-            width: 317px;
-            height: 242px;
-            top: 1550px;
-            left: -170px;
+            width: 211px;
+            height: 162px;
+            top: 1227px;
+            left: -94px;
+        }
+
+        .background__figure_7 {
+            width: 114px;
+            height: 48px;
+            top: 1488px;
         }
 
         .background__figure_22 {
-            top: 2004px;
+            top: 1916px;
+            width: 47px;
+            height: 32px;
         }
 
         .screen_action.second .action__item:nth-child(1) {
-            margin-top: 50px;
-            margin-left: 30px;
+            margin-top: 48px;
         }
 
         .screen_action.second .action__item:nth-child(2) {
-            margin-top: 140px;
-            margin-left: 30px;
+            margin-top: 112px;
         }
 
         .screen_action.second .action__item:nth-child(3) {
-            margin-top: 100px;
-            margin-left: 30px;
+            margin-top: 70px;
+            margin-bottom: 0;
         }
     }
     .fifth__screen {
+        .content {
+            padding-top: 164px;
+        }
         .global__screen {
             display: none;
         }

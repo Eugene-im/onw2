@@ -1,9 +1,19 @@
-$blue: #2B56F5;
-$yellow: #FFB300;
-$orange: #FF9500;
-$black: #1F333D;
-$white1: #F2F8FC;
-$white0: #FFFFFF;
-$textcolor: #1F333D;
+$blue: #2b56f5;
+$yellow: #ffb300;
+$orange: #ff9500;
+$black: #1f333d;
+$white1: #f2f8fc;
+$white0: #ffffff;
+$textcolor: #1f333d;
 $tablet: 1023px;
 $mobile: 560px;
+
+@mixin font ($fszPc, $lhPc, $fszMb, $lhMb, $fw: 400) {
+    font-size: $fszPc;
+    line-height: $lhPc;
+    font-weight: #{$fw};
+    @media (max-width: $mobile) {
+        font-size: $fszMb;
+        line-height: $lhMb;
+    }
+}
