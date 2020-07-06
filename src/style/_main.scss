@@ -26,7 +26,7 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-  }
+}
 
 .first__screen {
     background: $blue 0% 0% no-repeat padding-box;
@@ -51,17 +51,13 @@
 }
 
 .screen__title {
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 43px;
+    @include font(36px, 43px, 28px, 33px, 900);
     color: #002b40;
     margin-bottom: 32px;
 }
 
 .screen_description {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
+    @include font(24px, 32px, 18px, 24px);
     color: $black;
     max-width: 784px;
     width: 100%;
@@ -69,9 +65,7 @@
 }
 
 .action__item_title {
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 34px;
+    @include font(28px, 34px, 22px, 26px, 900);
     color: $black;
     margin-bottom: 16px;
 }
@@ -92,11 +86,11 @@
 }
 
 .btn {
+    @include font(16px, 24px, 16px, 24px, 500);
     min-width: 260px;
     min-height: 44px;
     background: $blue;
     border-radius: 22px;
-    font-weight: 500;
     color: $white0;
     cursor: pointer;
     display: flex;
@@ -104,7 +98,6 @@
     align-items: center;
     padding: 10px;
     text-align: center;
-    font-family: "Roboto", sans-serif;
 
     &:hover {
         background: $yellow;
@@ -147,9 +140,7 @@
 }
 
 .drop__text {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
+    @include font(16px, 24px, 16px, 24px, 500);
     color: #1f333d;
     padding-left: 24px;
     line-height: 56px;
@@ -236,8 +227,7 @@
     }
 
     a {
-        font-size: 16px;
-        line-height: 24px;
+        @include font(16px, 24px, 16px, 24px);
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -322,7 +312,7 @@
     width: 135px;
     height: 40px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,.35);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     cursor: pointer;
 
     &:focus {
@@ -337,7 +327,6 @@
 .desktop-icon {
     display: flex;
 }
-
 
 .menu {
     color: $white0;
@@ -377,16 +366,16 @@
         width: 100%;
         top: 0;
         transition: background-color 0.2s, box-shadow 0.2s ease-in-out;
-        &.sticky{
-                background-color: #fff;
-                box-shadow: 0 4px 32px #004d9926;
-                position: fixed;
-                .logo{
-                    background-image:  url("../img/onw/Group 5377.svg");
-                }
-                .menu{
-                    color:$black
-                }
+        &.sticky {
+            background-color: #fff;
+            box-shadow: 0 4px 32px #004d9926;
+            position: fixed;
+            .logo {
+                background-image: url("../img/onw/Group 5377.svg");
+            }
+            .menu {
+                color: $black;
+            }
         }
 
         .content {
@@ -446,9 +435,7 @@
     }
 
     .screen__cont_title {
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
+        @include font(48px, 58px, 36px, 43px, 900);
         margin-bottom: 25px;
         max-width: 325px;
         width: 100%;
@@ -537,9 +524,7 @@
     }
 
     .action__item_description {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
+        @include font(20px, 28px, 16px, 21px,500);
         color: $black;
         max-width: 784px;
         width: 100%;
@@ -1694,5 +1679,3 @@ i.icon {
         }
     }
 }
-
-

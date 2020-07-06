@@ -1,13 +1,27 @@
 @media (max-width: $tablet) {
+    #actionItem1,
+    #actionItem2{
+        position: relative;
+    }
+    .fixedPhone {
+        position: fixed !important;
+        top: 100px;
+    }
+    .downPhone{
+        bottom: 0;
+    }
     .content {
-        padding: 20px 24px;
+        padding: 0 24px;
     }
 
     .drop__list_wrap {
-       right: 0;
+        right: 0;
+        &:hover{
+            display: none;
+        }
     }
 
-    .drop__list {    
+    .drop__list {
         &::before {
             left: 145px !important;
         }
@@ -62,6 +76,7 @@
 
         .action__item_img {
             height: 345px;
+            margin: 55px auto 50px;
         }
 
         .content {
@@ -70,9 +85,18 @@
         .action__item_description {
             text-align: center;
         }
+        .screen__title {
+            margin-top: 74px;
+        }
     }
 
     .third__screen {
+        .screen__title {
+            margin-bottom: 16px;
+        }
+        .screen_description {
+            margin-bottom: 57px;
+        }
         .fee__item {
             max-width: 130px;
             text-align: center;
@@ -88,6 +112,9 @@
         .block__fee.second .fee__item {
             max-width: 192px;
         }
+        .screen_action .screen_description {
+            margin-top: -30px;
+        }
     }
 
     .foth__screen {
@@ -99,6 +126,11 @@
             width: 242px;
             height: 220px;
             top: 644px;
+            left: -25px;
+        }
+
+        .background__figure_3 {
+            top: 855px;
         }
 
         .background__figure_11,
@@ -118,6 +150,11 @@
             height: 242px;
             top: 1200px;
         }
+
+        .background__figure_7 {
+            top: 1475px;
+        }
+
         .background__figure_22 {
             top: 2004px;
         }
@@ -132,11 +169,11 @@
             min-height: 148px;
             margin: 20px auto;
             overflow: scroll;
+            padding: 0 24px;
 
             &::-webkit-scrollbar {
                 display: none;
             }
-
         }
     }
 
@@ -174,7 +211,7 @@
         .action__item.second .action__item_img {
             flex: 1 0 auto;
             padding-right: 24px;
-            position: relative;
+            position: absolute;
             z-index: 1;
         }
         .action__item_desc {
@@ -197,6 +234,12 @@
         .global__screen_img_back {
             width: 1280px;
             top: 35px;
+        }
+        #fixedPhone1 + .action__item_desc{
+            margin-left: 281px;
+        }
+        #fixedPhone2 + .action__item_desc{
+            margin-right: 281px;
         }
     }
     .sixth__screen {
