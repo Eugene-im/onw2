@@ -2,24 +2,25 @@ document.addEventListener("DOMContentLoaded", ready);
 
 var count = 0;
 var timeOut;
-var collapse = [ "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
+var collapse = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
 
 function ready() {
     var x = document.getElementsByClassName('dwn');
     var Name = "Unknown OS";
-    if (navigator.userAgent.indexOf("Win") != -1) Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
-    if (navigator.userAgent.indexOf("Mac") != -1) Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
-    if (navigator.userAgent.indexOf("Linux") != -1) Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
-    if (navigator.userAgent.indexOf("Android") != -1) Name =
+    var OSName = '';
+    if (navigator.userAgent.indexOf("Win") != -1) OSName='Windows'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
+    if (navigator.userAgent.indexOf("Mac") != -1) OSName='MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
+    if (navigator.userAgent.indexOf("Linux") != -1) OSName='Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
+    if (navigator.userAgent.indexOf("Android") != -1) OSName='Android'; Name =
         "Android OS";
-    if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+    if (navigator.userAgent.indexOf("like Mac") != -1) OSName='iOS'; Name =
         "iOS";
 
     [].forEach.call(x, function (el) {
         el.href = Name;
-        // el.innerHTML += ' ' + Name
     })
     dwnlink.href = Name;
+    if (OSName != '') clientOs.innerHTML = OSName;
 }
 
 document.addEventListener('click', function (e) {
@@ -35,10 +36,10 @@ document.addEventListener('click', function (e) {
             this.classList.toggle('background')
         }
     }
-    
+
 
     if (id) {
-        [].forEach.call(collapse, function(item) {
+        [].forEach.call(collapse, function (item) {
             if (item !== id) {
                 document.getElementById(item).checked = false;
             }
@@ -62,16 +63,26 @@ function goUp() {
     } else clearTimeout(timeOut);
 }
 
+function stickyPhone(elem,n){
+    var box = elem.getBoundingClientRect();
+    var fixEl = document.getElementById('fixedPhone'+n);
+    var delta = elem.offsetHeight - fixEl.offsetHeight - 100;
+    if ((box.top <= 96) && (box.top >= -delta)){
+        fixEl.classList.remove('downPhone');
+        fixEl.classList.add('fixedPhone');
+    } else if(box.top <= -delta){
+        fixEl.classList.add('downPhone');
+        fixEl.classList.remove('fixedPhone');
+    } else {
+        fixEl.classList.remove('fixedPhone');
+        fixEl.classList.remove('downPhone');
+    }
+}
+
 window.onscroll = function () {
     stickyHeader();
-
-    // SCROLL UP
-    // var scrollElem = document.getElementById("scrollToTop");
-    // if (window.pageYOffset > 1000) {
-    //     scrollElem.style.opacity = "1";
-    // } else {
-    //     scrollElem.style.opacity = "0";
-    // }
+    stickyPhone(actionItem1,1);
+    stickyPhone(actionItem2,2);
 };
 
 var header = document.getElementById("headerSticky");
@@ -101,7 +112,7 @@ function hoverItem(e) {
     if (e.target.classList.contains('item__hover')) {
         var items = [1, 2, 3, 4, 5, 6, 7];
 
-        [].forEach.call(items, function(item) {
+        [].forEach.call(items, function (item) {
             if (item == e.target.getAttribute('hattr')) {
                 document.getElementsByClassName('item__' + e.target.getAttribute('hattr'))[0].classList.add('visible')
             } else {
