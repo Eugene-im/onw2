@@ -28,6 +28,10 @@
     }
 }
 
+li {
+    list-style-type: none;
+}
+
 .first__screen {
     background: $blue 0% 0% no-repeat padding-box;
     min-height: 100vh;
@@ -1650,7 +1654,7 @@ i.icon {
     }
 
     .sub_title {
-        margin-bottom: 24px;
+        margin: 24px 0;
         text-align: left;
         font-weight: 900;
         font-size: 29px;
