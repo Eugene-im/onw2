@@ -4,6 +4,8 @@ var count = 0;
 var timeOut;
 var collapse = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
 
+// document.querySelectorAll('.action__item_description__list.mob')[0].scrollLeft
+
 document.addEventListener("DOMContentLoaded", ready);
 window.onscroll = function () {
     stickyHeader();
