@@ -1,28 +1,26 @@
-document.addEventListener("DOMContentLoaded", ready);
-
+var header = document.getElementById("headerSticky");
+var sticky = header.offsetTop;
 var count = 0;
 var timeOut;
 var collapse = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
 
-function ready() {
-    var x = document.getElementsByClassName('dwn');
-    var Name = "Unknown OS";
-    var OSName = '';
-    if (navigator.userAgent.indexOf("Win") != -1) OSName='Windows'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
-    if (navigator.userAgent.indexOf("Mac") != -1) OSName='MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
-    if (navigator.userAgent.indexOf("Linux") != -1) OSName='Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
-    if (navigator.userAgent.indexOf("Android") != -1) OSName='Android'; Name =
-        "Android OS";
-    if (navigator.userAgent.indexOf("like Mac") != -1) OSName='iOS'; Name =
-        "iOS";
+// document.querySelectorAll('.action__item_description__list.mob')[0].scrollLeft
 
-    [].forEach.call(x, function (el) {
-        el.href = Name;
-    })
-    dwnlink.href = Name;
-    if (OSName != '') clientOs.innerHTML = OSName;
-}
-
+document.addEventListener("DOMContentLoaded", ready);
+window.onscroll = function () {
+    stickyHeader();
+    if ((screen.width <= 1023) && (screen.width >= 560)) {
+        stickyPhone(actionItem1, 1);
+        stickyPhone(actionItem2, 2);
+    }
+};
+playvid.addEventListener('click', function () {
+    document.getElementsByClassName('overflow')[0].classList.toggle('visible')
+})
+document.getElementsByClassName('overflow')[0].addEventListener('click', function (e) {
+    e.stopPropagation();
+    this.classList.toggle('visible')
+})
 document.addEventListener('click', function (e) {
     var id = e.target.id;
 
@@ -31,12 +29,10 @@ document.addEventListener('click', function (e) {
     } else if (document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.contains('visible')) {
         document.querySelectorAll('.drop__button + .drop__list_wrap')[0].classList.toggle('visible')
     } else if (e.target.classList.contains('question__item')) {
-        // console.log(e.target.getElementsByTagName('input')[0].getAttribute('checked'));
         if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
             this.classList.toggle('background')
         }
     }
-
 
     if (id) {
         [].forEach.call(collapse, function (item) {
@@ -46,31 +42,48 @@ document.addEventListener('click', function (e) {
         });
     }
 })
-playvid.addEventListener('click', function () {
-    document.getElementsByClassName('overflow')[0].classList.toggle('visible')
-})
-document.getElementsByClassName('overflow')[0].addEventListener('click', function (e) {
-    e.stopPropagation();
-    this.classList.toggle('visible')
-})
 
-function goUp() {
-    var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+actionItem1.onmouseover = hoverItem;
+actionItem1.onmouseout = hoverItem;
+actionItem2.onmouseover = hoverItem;
+actionItem2.onmouseout = hoverItem;
 
-    if (top > 0) {
-        window.scrollBy(0, -100);
-        timeOut = setTimeout('goUp()', 20);
-    } else clearTimeout(timeOut);
+function ready() {
+    var x = document.getElementsByClassName('dwn');
+    var Name = "Unknown OS";
+    var OSName = '';
+    if (navigator.userAgent.indexOf("Win") != -1) OSName = 'Windows'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
+    if (navigator.userAgent.indexOf("Mac") != -1) OSName = 'MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
+    if (navigator.userAgent.indexOf("Linux") != -1) OSName = 'Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
+    if (navigator.userAgent.indexOf("Android") != -1) OSName = 'Android'; Name =
+        "Android OS";
+    if (navigator.userAgent.indexOf("like Mac") != -1) OSName = 'iOS'; Name =
+        "iOS";
+
+    [].forEach.call(x, function (el) {
+        el.href = Name;
+    })
+    dwnlink.href = Name;
+    if (OSName != '') clientOs.innerHTML = OSName;
 }
 
-function stickyPhone(elem,n){
+// function goUp() {
+//     var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+
+//     if (top > 0) {
+//         window.scrollBy(0, -100);
+//         timeOut = setTimeout('goUp()', 20);
+//     } else clearTimeout(timeOut);
+// }
+
+function stickyPhone(elem, n) {
     var box = elem.getBoundingClientRect();
-    var fixEl = document.getElementById('fixedPhone'+n);
+    var fixEl = document.getElementById('fixedPhone' + n);
     var delta = elem.offsetHeight - fixEl.offsetHeight - 100;
-    if ((box.top <= 96) && (box.top >= -delta)){
+    if ((box.top <= 96) && (box.top >= -delta)) {
         fixEl.classList.remove('downPhone');
         fixEl.classList.add('fixedPhone');
-    } else if(box.top <= -delta){
+    } else if (box.top <= -delta) {
         fixEl.classList.add('downPhone');
         fixEl.classList.remove('fixedPhone');
     } else {
@@ -79,15 +92,6 @@ function stickyPhone(elem,n){
     }
 }
 
-window.onscroll = function () {
-    stickyHeader();
-    stickyPhone(actionItem1,1);
-    stickyPhone(actionItem2,2);
-};
-
-var header = document.getElementById("headerSticky");
-var sticky = header.offsetTop;
-
 function stickyHeader() {
     if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
@@ -95,18 +99,6 @@ function stickyHeader() {
         header.classList.remove("sticky");
     }
 }
-
-// document.querySelectorAll('cb')
-// var cbs = document.getElementsByClassName("cb");
-// [].forEach.call(cbs, function (el) {
-//     el.onchange = cbChange(el);
-// })
-// function cbChange(obj) {
-//     for (var i = 0; i < cbs.length; i++) {
-//         cbs[i].checked = false;
-//     }
-//     // obj.checked = true;
-// }
 
 function hoverItem(e) {
     if (e.target.classList.contains('item__hover')) {
@@ -121,8 +113,3 @@ function hoverItem(e) {
         });
     }
 }
-
-actionItem1.onmouseover = hoverItem;
-actionItem1.onmouseout = hoverItem;
-actionItem2.onmouseover = hoverItem;
-actionItem2.onmouseout = hoverItem;
