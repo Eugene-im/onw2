@@ -1,13 +1,13 @@
 @media (max-width: $tablet) {
     #actionItem1,
-    #actionItem2{
+    #actionItem2 {
         position: relative;
     }
     .fixedPhone {
         position: fixed !important;
         top: 100px;
     }
-    .downPhone{
+    .downPhone {
         bottom: 0;
     }
     .content {
@@ -16,7 +16,7 @@
 
     .drop__list_wrap {
         right: 0;
-        &:hover{
+        &:hover {
             display: none;
         }
     }
@@ -32,6 +32,13 @@
     }
 
     .first__screen {
+        .background__figure_1 {
+            top: -306px;
+            left: 400px;
+        }
+        .background__figure_2 {
+            left: -820px;
+        }
         .background__wave_1 {
             bottom: -2px;
         }
@@ -235,10 +242,10 @@
             width: 1280px;
             top: 35px;
         }
-        #fixedPhone1 + .action__item_desc{
+        #fixedPhone1 + .action__item_desc {
             margin-left: 281px;
         }
-        #fixedPhone2 + .action__item_desc{
+        #fixedPhone2 + .action__item_desc {
             margin-right: 281px;
         }
     }
@@ -266,6 +273,9 @@
             height: 240px;
             top: 829px;
             right: -210px;
+        }
+        .question__item input:checked + label {
+            width: 480px;
         }
     }
     .seventh__screen {
