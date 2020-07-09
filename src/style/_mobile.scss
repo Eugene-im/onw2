@@ -1,4 +1,7 @@
 @media (max-width: $mobile) {
+    .btn {
+        min-width: 312px;
+    }
     .content {
         padding: 0 16px;
     }
@@ -11,6 +14,12 @@
         display: none;
     }
 
+    header .menu {
+        display: flex;
+        justify-content: center;
+        max-width: 146px;
+    }
+
     .first__screen {
         .first__screen_layer {
             padding-top: 40px;
@@ -20,11 +29,6 @@
             left: -885px;
         }
 
-        header .menu {
-            display: flex;
-            justify-content: center;
-            max-width: 146px;
-        }
         .screen__cont__image {
             width: 525px;
             height: 465px;
@@ -63,7 +67,7 @@
         }
         .action__item_img {
             height: 195px;
-            margin: 27px auto 42px;
+            margin: 27px auto 22px;
         }
     }
     .third__screen {
@@ -177,6 +181,15 @@
             margin-top: 70px;
             margin-bottom: 0;
         }
+        .screen_action.third .action__item {
+            margin-right: 10px;
+            .action__item_delimeter {
+                background: url("../img/onw/Path 6041_m.svg") no-repeat;
+                background-size: contain;
+                width: 16px;
+                height: 6px;
+            }
+        }
     }
     .fifth__screen {
         .content {
@@ -193,12 +206,12 @@
                 width: calc(100% + 32px);
                 margin: 0 -16px;
                 padding: 16px;
-                .item__img{
+                .item__img {
                     justify-content: flex-start;
                     align-items: center;
                     margin-right: unset;
                     flex: unset;
-                    .icon{
+                    .icon {
                         margin-right: 16px;
                     }
                 }
@@ -218,7 +231,7 @@
                 flex-direction: column;
                 justify-content: flex-start;
             }
-            .item__description div{
+            .item__description div {
                 margin-top: unset;
             }
         }
@@ -290,6 +303,13 @@
         }
         .screen__title {
             text-align: center;
+            margin-bottom: 37px;
+        }
+        .question__list label {
+            padding: 10px 15px 10px 50px;
+            &::before {
+                top: 15px;
+            }
         }
     }
     .seventh__screen {
@@ -311,5 +331,8 @@
         .footer__text__privacy_policy {
             margin-top: 13px;
         }
+    }
+    .policy main .content{
+        padding: 16px 16px 53px;
     }
 }

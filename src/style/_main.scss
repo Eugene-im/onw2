@@ -37,6 +37,41 @@ li {
     min-height: 100vh;
 }
 
+header {
+    z-index: 6;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition: background-color 0.2s, box-shadow 0.2s ease-in-out;
+    &.sticky {
+        background-color: #fff;
+        box-shadow: 0 4px 32px #004d9926;
+        position: fixed;
+        .logo {
+            background-image: url("../img/onw/Group 5377.svg");
+        }
+        .menu {
+            color: $black;
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    .content {
+        min-height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        max-width: 362px;
+    }
+}
+
 .logo {
     display: block;
     width: 128px;
@@ -362,38 +397,6 @@ li {
     .content {
         flex-direction: row;
         z-index: 1;
-    }
-
-    header {
-        z-index: 6;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        transition: background-color 0.2s, box-shadow 0.2s ease-in-out;
-        &.sticky {
-            background-color: #fff;
-            box-shadow: 0 4px 32px #004d9926;
-            position: fixed;
-            .logo {
-                background-image: url("../img/onw/Group 5377.svg");
-            }
-            .menu {
-                color: $black;
-            }
-        }
-
-        .content {
-            min-height: 72px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            align-content: center;
-            flex-wrap: wrap;
-        }
-
-        .menu {
-            max-width: 362px;
-        }
     }
 
     .first__screen_layer {
@@ -1286,21 +1289,6 @@ li {
         max-width: 580px;
     }
 
-    .question__list label {
-        margin: 8px 0;
-        padding: 15px 15px 15px 0;
-        width: 100%;
-
-        &:hover {
-            background: #f2f8fc 0% 0% no-repeat padding-box;
-            border-radius: 6px;
-
-            .question__text {
-                color: $blue;
-            }
-        }
-    }
-
     .question__item {
         max-width: 580px;
         width: 100%;
@@ -1325,7 +1313,9 @@ li {
         label {
             display: block;
             position: relative;
-            padding-left: 50px;
+            margin: 8px 0;
+            padding: 15px 15px 15px 50px;
+            width: 100%;
 
             &::before {
                 top: 22px;
@@ -1336,6 +1326,14 @@ li {
                 position: absolute;
                 transition: transform 0.5s ease-in-out;
                 background: center / cover no-repeat url("../img/onw/shevron.svg");
+            }
+            &:hover {
+                background: #f2f8fc 0% 0% no-repeat padding-box;
+                border-radius: 6px;
+    
+                .question__text {
+                    color: $blue;
+                }
             }
         }
 
@@ -1605,7 +1603,6 @@ i.icon {
 
     header {
         z-index: 3;
-        position: sticky;
         top: 0;
 
         .content {
