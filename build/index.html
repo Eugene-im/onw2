@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OnWallet | One Awesome Way</title>
+  <link rel="shortcut icon" href="./img/onw/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,18 +15,24 @@
       <div class="first__screen screen__page">
         <div class="background__figure_1"></div>
         <div class="background__figure_2"></div>
-        <header>
+        <header id="headerSticky">
           <div class="content">
             <a href="/" class="logo"></a>
             <ul class="menu">
-              <li><a href="#">About</a></li>
+              <li><a href="#" style="visibility: hidden;">About</a></li>
               <li class="link"><a href="#">Download</a></li>
-              <div class="drop__list dd">
-                <a href="#" download="" ><i class="icon os windows"></i>OnWallet for Windows</a>
-                <a href="#" download="" ><i class="icon os macos"></i>OnWallet for macOS X</a>
+              <div class="drop__list_wrap">
+                <div class="drop__list dd desktop-icon">
+                  <a href="https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip" download=""><i class="icon os windows"></i> OnWallet for Windows</a>
+                  <a href="https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip" download=""><i class="icon os macos"></i>OnWallet for macOS X</a>
+                </div>
+                <div class="drop__list dd mobile-icon">
+                  <a href="#"><i class="icon os ios"></i> OnWallet for iOS</a>
+                  <a href="#"><i class="icon os android"></i> OnWallet for Android</a>
+                </div>
               </div>
-              <li><a href="http://alpha.onwallet.com/#/login">Log In</a></li>
-              <li><a href="http://alpha.onwallet.com/#/register">Register</a></li>
+              <li class="nomob"><a href="http://alpha.onwallet.com/#/login">Log In</a></li>
+              <li class="nomob"><a href="http://alpha.onwallet.com/#/register">Register</a></li>
             </ul>
           </div>
         </header>
@@ -34,14 +41,22 @@
           <div class="first__screen_cont">
             <div class="screen__cont__action">
               <h1 class="screen__cont_title">Crypto & Digital Wallet, Redefined.</h1>
-              <div class="drop">
-                <a id="dwnlink" href="#" download="" class="drop__text">Download OnWallet for Windows</a>
-                <div class="drop__button" for="ddn">
-                  <!-- <i class="icon arrow"></i> -->
+              <div class="drop__wrap">
+                <div class="drop">
+                  <a id="dwnlink" href="#" download="" class="drop__text">Download OnWallet for <span id="clientOs">Windows</span></a>
+                                                                                <!-- need to change text in different os -->
                 </div>
-                <div class="drop__list dd">
-                  <a href="#" download="" ><i class="icon os windows"></i> OnWallet for Windows</a>
-                  <a href="#" download="" ><i class="icon os macos"></i>OnWallet for macOS X</a>
+      
+                <div class="drop__button" for="ddn"></div>
+                <div class="drop__list_wrap">
+                  <div class="drop__list_second dd desktop-icon">
+                    <a href="https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip" download=""><i class="icon os windows"></i> OnWallet for Windows</a>
+                    <a href="https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip" download=""><i class="icon os macos"></i>OnWallet for macOS X</a>
+                  </div>
+                  <div class="drop__list_second dd mobile-icon">
+                    <a href="#"><i class="icon os ios"></i> OnWallet for iOS</a>
+                    <a href="#"><i class="icon os android"></i> OnWallet for Android</a>
+                  </div>
                 </div>
               </div>
               <div class="download__links">
@@ -59,13 +74,14 @@
                 </div>
               </div>
             </div>
-            <img class="screen__cont__image" src="./img/onw/phone-top-view-v4-dited@2x.png" alt="">
+            <img class="screen__cont__image" src="./img/onw/phone-top-view-v4-edited.png" alt="">
             <!-- <div > -->
           </div>
         </div>
+        <img src='./img/onw/Path 5917.svg' alt="" class="background__wave_1" />
       </div>
       <div class="second__screen screen__page">
-          <div class="background__wave_1"></div>
+          <!-- <div class="background__wave_1"></div> -->
           <div class="background__figure_1"></div>
           <div class="background__figure_2"></div>
           <!-- <div class="background__figure_3"></div> -->
@@ -104,21 +120,21 @@
               </div>
               <div class="fee__item">
                 <div class="fee__item_val">0%</div>
-                <div class="fee__item_desc">monthly fee</div>
+                <div class="fee__item_desc">OnWallet & Deho transaction fee</div>
               </div>
               <div class="fee__item">
                 <div class="fee__item_val">0%</div>
-                <div class="fee__item_desc">monthly fee</div>
+                <div class="fee__item_desc">fee for online shopping</div>
               </div>
               <div class="fee__item">
                 <div class="fee__item_val">0%</div>
-                <div class="fee__item_desc">monthly fee</div>
+                <div class="fee__item_desc">charge on the gained profit</div>
               </div>
             </div>
           </div>
           <div class="screen_action video__action_block">
             <div class="background__for_video"></div>
-            <button class="button_play_video"></button>
+            <button id='playvid' class="button_play_video"></button>
             <div class="button_play_video_text">Watch to discover more</div>
           </div>
           <div class="screen_action">
@@ -165,7 +181,7 @@
           </div>
       
           <div class="screen_action first">
-              <div class="background__wave_2"></div>
+              <img src="./img/onw/Path 5935.svg" alt="" class="background__wave_2" />
               <div class="screen_action__img"></div>
           </div>
           <div class="content">
@@ -193,115 +209,218 @@
                   <div class="action__item">
                       <h3 class="action__item_title">Your transaction is Super-Secure and Recoverable</h3>
                       <div class="action__item_description">
-                          Since OnWallet operates offline, single point failure is avoidable in case of network failure, errors or system crash. Any fraudulent transaction is recoverable in Deho using OnWallet in such cases.
+                          Since OnWallet operates offline, single point failure is avoidable in case of network failure,
+                          errors or system crash. Any fraudulent transaction is recoverable in Deho using OnWallet in such
+                          cases.
                       </div>
                   </div>
               </div>
               <div class="screen_description">
                   We trade with popular crypto currencies
               </div>
-              <div class="screen_action third">
-                  <div class="action__item">
+          </div>
+          <div class="screen_action third">
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
                       <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
+                      <div class="action__item_img_descr">Deho</div>
                   </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_delimeter"></div>
-                  </div>
-                  <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <!-- <div class="action__item_delimeter"></div> -->
-                  </div>
+                  <div class="action__item_delimeter"></div>
               </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">Bitcoin</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">Ethereum</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">Ripple</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">Litecoin</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">Bitcoin Cash</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">Tether</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">USD Coin</div>
+                  </div>
+                  <div class="action__item_delimeter"></div>
+              </div>
+              <div class="action__item">
+                  <div class="action__item_img_wrap">
+                      <div class="action__item_img"></div>
+                      <div class="action__item_img_descr">DAI</div>
+                  </div>
+                  <!-- <div class="action__item_delimeter"></div> -->
+              </div>
+          </div>
+          <div class="content">
               <a href="#" download="" class="btn dwn">Trade Deho with OnWallet</a>
           </div>
       </div>
       <div class="fifth__screen screen__page">
-          <div class="background__figure_31"></div>
-          <div class="background__figure_32"></div>
-          <div class="background__figure_33"></div>
-          <div class="background__figure_34"></div>
+      
+          <div class="background__figure_15"></div>
+          <div class="background__figure_14"></div>
+      
           <div class="content">
               <h2 class="screen__title">
                   Rich Functionality
               </h2>
               <div class="screen_action">
-                  <div class="action__item first">
-                      <div class="action__item_img">
+                  <div class="action__item first" id='actionItem1'>
+                      <ul class="action__item_description__list mob">
+                          <li class="item__hover" hattr='1'>
+                              <div class="item__img"><i class="icon transfer"></i>
+                                  <h4>Transfer</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      Transfer FIAT or Cryptocurrencies to anyone and anywhere in a faster and easiest way
+                                      than traditions. With Deho’s high-speed crypto, the coin transfer between users or
+                                      merchants will be instant than any other cryptocurrencies.
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="item__hover" hattr='2'>
+                              <div class="item__img"><i class="icon recive"></i>
+                                  <h4>Receive</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      With OnWallet, personal and business account holders can send payment request invoice to
+                                      anyone. The sender can pay instantly from different payment sources like OnWallet
+                                      wallet, Crypto wallet, Card, Shopping, and Shopping Rewards linked third-party
+                                      e-wallets.
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="item__hover" hattr='3'>
+                              <div class="item__img"><i class="icon exchange"></i>
+                                  <h4>Exchange</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      With OnWallet, user can exchange from Deho to other cryptocurrencies or FIAT currency
+                                      and vice-versa at 3% flat currency conversion fee.
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="item__hover" hattr='4'>
+                              <div class="item__img"><i class="icon nfc"></i>
+                                  <h4>NFC Pay</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      Partnering with the world-class providers and exchange platforms, OnWallet has developed
+                                      a Virtual and Physical Card with NFC support that lets you do more. With OnWallet card,
+                                      make payment, trading, buying and selling simple at anyplace and anytime.
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                      <div class="action__item_img" id="fixedPhone1">
+                          <div class="background__figure_31"></div>
+                          <div class="background__figure_32"></div>
                           <div class="action__item_img_phone">
-                              <div class="item__1 visible"></div>
-                              <div class="item__2"></div>
-                              <div class="item__3"></div>
-                              <div class="item__4"></div>
+                              <div class="item__h1 item__1"></div>
+                              <div class="item__h1 item__2"></div>
+                              <div class="item__h1 item__3"></div>
+                              <div class="item__h1 item__4"></div>
                           </div>
                       </div>
                       <div class="action__item_desc">
                           <h3 class="action__item_title">On-spot. OnWallet. Locally, Internationally.</h3>
       
-                          <div class="action__item_description">The OnWallet payment gateway is instantaneous. With one tap, OnWallet lets you transfer/exchange FIAT or cryptocurrency anywhere, real-time with the best exchange rate and no extra fees. That’s fast, easy and cheap thanks to OnWallet’s accelerated mining.</div>
+                          <div class="action__item_description">The OnWallet payment gateway is instantaneous. With one tap,
+                              OnWallet lets you transfer/exchange FIAT or cryptocurrency anywhere, real-time with the best
+                              exchange rate and no extra fees. That’s fast, easy and cheap thanks to OnWallet’s accelerated
+                              mining.</div>
                           <ul class="action__item_description__list">
                               <li class="item__hover" hattr='1'>
-                                  <div class="item__img"><i class="icon transfer"></i></div>
+                                  <div class="item__img"><i class="icon transfer"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>Transfer</h4>
+      
                                       <div>
-                                          Transfer FIAT or Cryptocurrencies to anyone and anywhere in a faster and easiest way than traditions. With Deho’s high-speed crypto, the coin transfer between users or merchants will be instant than any other cryptocurrencies.
+                                          Transfer FIAT or Cryptocurrencies to anyone and anywhere in a faster and easiest way
+                                          than traditions. With Deho’s high-speed crypto, the coin transfer between users or
+                                          merchants will be instant than any other cryptocurrencies.
                                       </div>
                                   </div>
                               </li>
                               <li class="item__hover" hattr='2'>
-                                  <div class="item__img"><i class="icon recive"></i></div>
+                                  <div class="item__img"><i class="icon recive"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>Receive</h4>
+      
                                       <div>
-                                          With OnWallet, personal and business account holders can send payment request invoice to anyone. The sender can pay instantly from different payment sources like OnWallet wallet, Crypto wallet, Card, Shopping, and Shopping Rewards linked third-party e-wallets.
+                                          With OnWallet, personal and business account holders can send payment request
+                                          invoice to anyone. The sender can pay instantly from different payment sources like
+                                          OnWallet wallet, Crypto wallet, Card, Shopping, and Shopping Rewards linked
+                                          third-party e-wallets.
                                       </div>
                                   </div>
                               </li>
                               <li class="item__hover" hattr='3'>
-                                  <div class="item__img"><i class="icon exchange"></i></div>
+                                  <div class="item__img"><i class="icon exchange"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>Exchange</h4>
+      
                                       <div>
-                                          With OnWallet, user can exchange from Deho to other cryptocurrencies or FIAT currency and vice-versa at 3% flat currency conversion fee.
+                                          With OnWallet, user can exchange from Deho to other cryptocurrencies or FIAT
+                                          currency and vice-versa at 3% flat currency conversion fee.
                                       </div>
                                   </div>
                               </li>
                               <li class="item__hover" hattr='4'>
-                                  <div class="item__img"><i class="icon nfc"></i></div>
+                                  <div class="item__img"><i class="icon nfc"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>NFC Pay</h4>
+      
                                       <div>
-                                          Partnering with the world-class providers and exchange platforms, OnWallet has developed a Virtual and Physical Card with NFC support that lets you do more. With OnWallet card, make payment, trading, buying and selling simple at anyplace and anytime.
+                                          Partnering with the world-class providers and exchange platforms, OnWallet has
+                                          developed a Virtual and Physical Card with NFC support that lets you do more. With
+                                          OnWallet card, make payment, trading, buying and selling simple at anyplace and
+                                          anytime.
                                       </div>
                                   </div>
                               </li>
@@ -309,26 +428,74 @@
                       </div>
                   </div>
                   <div class="background__circle_4"></div>
-                  <div class="background__figure_14"></div>
-                  <div class="action__item second">
-                      <div class="action__item_img">
+                  <div class="action__item second" id='actionItem2'>
+                      <ul class="action__item_description__list mob">
+                          <li class="item__hover" hattr='5'>
+                              <div class="item__img"><i class="icon trade"></i>
+                                  <h4>Trade Deho and/or Another cryptocurrencies</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      OnWallet is a platform to make cryptocurrencies trading secure yet simple. The
+                                      OnWallet marketplace lets you trade other cryptocurrincies and digital assets
+                                      efficiently in few taps from mobile and desktop App.
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="item__hover" hattr='6'>
+                              <div class="item__img"><i class="icon manage"></i>
+                                  <h4>OnWallet Business</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      With OnWallet business account, merchants can receive the payments from the
+                                      customers instantly in different formats of currencies without any border
+                                      restrictions. Merchants can issue product offers, vouchers instantly to the users
+                                      and make the environment green.
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="item__hover" hattr='7'>
+                              <div class="item__img"><i class="icon observe"></i>
+                                  <h4>Shopping Cards</h4>
+                              </div>
+                              <div class="item__description">
+      
+                                  <div>
+                                      With OnWallet virtual shopping card, OnWallet account holders can simply collect and
+                                      redeem the rewards, gifts, loyalty points, vouchers, e-tickets, etc.
+                                  </div>
+                              </div>
+                          </li>
+      
+                      </ul>
+      
+                      <div class="action__item_img" id="fixedPhone2">
+                          <div class="background__figure_33"></div>
+                          <div class="background__figure_34"></div>
                           <div class="action__item_img_phone">
-                              <div class="item__5 visible"></div>
-                              <div class="item__6"></div>
-                              <div class="item__7"></div>
+                              <div class="item__h1 item__5 visible"></div>
+                              <div class="item__h1 item__6"></div>
+                              <div class="item__h1 item__7"></div>
                           </div>
                       </div>
                       <!-- <div class="action__item_img"></div> -->
                       <div class="action__item_desc">
                           <h3 class="action__item_title">Buy. Save. Gain. Grow.</h3>
       
-                          <div class="action__item_description">With OnWallet, buying Deho cryptocurrency is an investing in what e called MVV (Minimum Valid Value) in gold and/or silver and/or platinum. The only cryptocurrency that allows the users to choose the most precious metals to link with the Deho coin.</div>
+                          <div class="action__item_description">With OnWallet, buying Deho cryptocurrency is an investing in
+                              what e called MVV (Minimum Valid Value) in gold and/or silver and/or platinum. The only
+                              cryptocurrency that allows the users to choose the most precious metals to link with the Deho
+                              coin.</div>
                           <ul class="action__item_description__list">
                               <li class="item__hover" hattr='5'>
-                                  <div class="item__img"><i class="icon trade"></i></div>
+                                  <div class="item__img"><i class="icon trade"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>Trade Deho and/or Another cryptocurrencies</h4>
+      
                                       <div>
                                           OnWallet is a platform to make cryptocurrencies trading secure yet simple. The
                                           OnWallet marketplace lets you trade other cryptocurrincies and digital assets
@@ -337,10 +504,11 @@
                                   </div>
                               </li>
                               <li class="item__hover" hattr='6'>
-                                  <div class="item__img"><i class="icon manage"></i></div>
+                                  <div class="item__img"><i class="icon manage"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>OnWallet Business</h4>
+      
                                       <div>
                                           With OnWallet business account, merchants can receive the payments from the
                                           customers instantly in different formats of currencies without any border
@@ -350,10 +518,11 @@
                                   </div>
                               </li>
                               <li class="item__hover" hattr='7'>
-                                  <div class="item__img"><i class="icon observe"></i></div>
+                                  <div class="item__img"><i class="icon observe"> </i>
+                                  </div>
                                   <div class="item__description">
-      
                                       <h4>Shopping Cards</h4>
+      
                                       <div>
                                           With OnWallet virtual shopping card, OnWallet account holders can simply collect and
                                           redeem the rewards, gifts, loyalty points, vouchers, e-tickets, etc.
@@ -364,55 +533,14 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="background__figure_15"></div>
       
                   <div class="background__circle_5"></div>
-                  <!-- {/* <div class="action__item">
-                      <div class="action__item_img"></div>
-                      <div class="action__item_desc">
-                          <h3 class="action__item_title">On-spot. OnWallet. Locally, Internationally.</h3>
-      
-                          <div class="action__item_description screen_description">The OnWallet payment gateway is
-                              instantaneous. With one tap, OnWallet lets you transfer/exchange FIAT or cryptocurrency
-                              anywhere, real-time with the best exchange rate and no extra fees. That’s fast, easy and cheap
-                              thanks to OnWallet’s accelerated mining.</div>
-                          <ul class="action__item_description__list">
-                              <li class="item__hover" hattr='1'>
-                                  <h4>Transfer</h4>
-                                  <div>
-                                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                      voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                  </div>
-                              </li>
-                              <li class="item__hover" hattr='1'>
-                                  <h4>Transfer</h4>
-                                  <div>
-                                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                      voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                  </div>
-                              </li>
-                              <li class="item__hover" hattr='1'>
-                                  <h4>Transfer</h4>
-                                  <div>
-                                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                      voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                  </div>
-                              </li>
-                              <li class="item__hover" hattr='1'>
-                                  <h4>Transfer</h4>
-                                  <div>
-                                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                      voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                  </div>
-                              </li>
-                          </ul>
-                      </div>
-                  </div> */} -->
                   <div class="background__circle_6"></div>
               </div>
           </div>
           <div class="global__screen">
-              <div class="global__screen_img"></div>
+              <img src="./img/onw/Path 9732.svg" alt="" class="global__screen_img">
+              <img src="./img/onw/screens-scene.png" alt="" class="global__screen_img_back">
           </div>
       </div>
       <div class="sixth__screen screen__page">
@@ -425,9 +553,53 @@
                   Frequently Asked Questions
               </h2>
               <div class="screen_action">
+                  <!-- <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">What is Deho?</a>
+                          </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                          <div class="panel-body">Deho is the first digital coin that is protected by precious metals like Gold, Silver and Platinum by default. This makes your crypto investments securest. We’ve built Deho to run on a hybrid-decentralized architecture. This means your Deho digital currency is also protects your keys at hardware level, making it the securest cryptocurrencies yet.</div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">When will OnWallet be available?</a>
+                          </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                          <div class="panel-body"> OnWallet is currently being built. Sign up here to be one of the first to know about OnWallet.</div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                          </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                      </div>
+                    </div> 
+                  </div> -->
                   <ul class="question__list">
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q1">
+                          <input type="checkbox" class="cb" name="fq" id="q0">
+                          <label for="q0">
+                              <div class="question__text"> What is Deho? </div>
+                              <div class="question__answer">
+                                  Deho is the first digital coin that is protected by precious metals like Gold, Silver and Platinum by default. This makes your crypto investments securest. We’ve built Deho to run on a hybrid-decentralized architecture. This means your Deho digital currency is also protects your keys at hardware level, making it the securest cryptocurrencies yet.
+                              </div>
+                          </label>
+                      </li>
+                      <li class="question__item" id="q11">
+                          <input type="checkbox" class="cb" name="fq" id="q1">
                           <label for="q1">
                               <div class="question__text"> When will OnWallet be available?</div>
                               <div class="question__answer">
@@ -436,7 +608,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q2">
+                          <input type="checkbox" class="cb" name="fq" id="q2">
                           <label for="q2">
                               <div class="question__text">What do I need to get started?</div>
                               <div class="question__answer">
@@ -445,7 +617,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q3">
+                          <input type="checkbox" class="cb" name="fq" id="q3">
                           <label for="q3">
                               <div class="question__text">How can I use OnWallet?</div>
                               <div class="question__answer">
@@ -454,7 +626,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q4">
+                          <input type="checkbox" class="cb" name="fq" id="q4">
                           <label for="q4">
                               <div class="question__text">What can I use OnWallet for?</div>
                               <div class="question__answer">
@@ -463,16 +635,16 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q5">
+                          <input type="checkbox" class="cb" name="fq" id="q5">
                           <label for="q5">
-                              <div class="question__text"> When will OnWallet be available?</div>
+                              <div class="question__text">Will OnWallet charge fees?</div>
                               <div class="question__answer">
                                   What you send is what they get. You can add, send, receive, and withdraw money from your wallet without worrying about hidden charges. OnWallet is cutting fees to help people keep more of their money.
                               </div>
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q6">
+                          <input type="checkbox" class="cb" name="fq" id="q6">
                           <label for="q6">
                               <div class="question__text">Where is OnWallet available?</div>
                               <div class="question__answer">
@@ -481,7 +653,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q7">
+                          <input type="checkbox" class="cb" name="fq" id="q7">
                           <label for="q7">
                               <div class="question__text">Can I use my local currency in OnWallet?</div>
                               <div class="question__answer">
@@ -490,7 +662,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q8">
+                          <input type="checkbox" class="cb" name="fq" id="q8">
                           <label for="q8">
                               <div class="question__text">How will you prevent fraud?</div>
                               <div class="question__answer">
@@ -499,7 +671,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q9">
+                          <input type="checkbox" class="cb" name="fq" id="q9">
                           <label for="q9">
                               <div class="question__text">Can businesses use OnWallet?</div>
                               <div class="question__answer">
@@ -508,7 +680,7 @@
                           </label>
                       </li>
                       <li class="question__item">
-                          <input type="checkbox" name="" id="q10">
+                          <input type="checkbox" class="cb" name="fq" id="q10">
                           <label for="q10">
                               <div class="question__text">What is the OnWallet payment system?</div>
                               <div class="question__answer">
@@ -524,9 +696,9 @@
           <div class="background__figure_54"></div>
       
           <div class="content">
-              <h2 class="screen__title">
-                  One-Stop Crypto Trading and Wallet Solution
-              </h2>
+              <h3 class="action__item_title">
+                  One-Stop Crypto Trading and Wallet
+              </h3>
               <div class="screen_action">
                   <a href="#" download="" class="btn dwn">Download OnWallet</a>
                   <div class="download__links_market">
@@ -536,37 +708,42 @@
               </div>
           </div>
       </div>
+      <img src="./img/onw/Path 5946.svg" alt="" class="background__wave_3">
     </main>
     <footer>
-        <div class="background__wave_3"></div>
-        <div class="content">
-          <div class="fline">
-            <a href="/" class="logo"></a>
-            <ul class="menu">
-              <li><a href="#"><i class="icon os ios"></i></a></li>
-              <li><a href="#"><i class="icon os macos"></i></a></li>
-              <li><a href="#"><i class="icon os android"></i></a></li>
-              <li><a href="#"><i class="icon os windows"></i></a></li>
-            </ul>
-          </div>
-          <div class="footer__text_section">
-            Banking services provided by OnWallet or Members FDIC. OnWallet Visa® Debit Card is issued by The Bank pursuant to a license from Visa U.S.A. Inc. and may be used everywhere Visa debit cards are accepted. The OnWallet Visa® Credit Builder Card is issued by Bank pursuant to a license from Visa U.S.A. Inc. and may be used everywhere Visa credit cards are accepted. Please see back of your Card for its issuing bank. Please note: By clicking on some of the links above, you can leave OnWallet website and be directed to an external website. The privacy policies of the external website may differ from our privacy policies. Please review the privacy policies and security indicators displayed on the external website before providing and personal information.
+      <div class="content">
+        <div class="fline">
+          <a href="/#/login" class="logo"></a>
+          <ul class="menu">
+            <li><a href="#"><i class="icon os ios"></i></a></li>
+            <li><a href="https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip"><i class="icon os macos"></i></a></li>
+            <li><a href="#"><i class="icon os android"></i></a></li>
+            <li><a href="https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip"><i class="icon os windows"></i></a></li>
+          </ul>
         </div>
+        <div class="footer__text_wrap">
+          <div class="footer__text_section">
+            When you visit or interact with our sites, services, applications, tools or messaging, we or our authorised
+            service providers may use cookies, web beacons, and other similar technologies for storing information to help
+            provide you with a better, faster and safer experience and for advertising purposes.
+          </div>
           <div class="footer__text__privacy">
+            <div class="footer__text__powered">
+              OnWallet Services are provided by OnWallet Limited.
+            </div>
             <div class="footer__text__copyright">
               Ⓒ 2020 OnWallet. All rights reserved.
-          </div>
-            <a href="#" class="footer__text__privacy_policy">
+            </div>
+            <a href="./policy.html" class="footer__text__privacy_policy">
               Privacy Policy
-          </a>
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   </div>
   <div class="overflow">
-    <div class="no_design">
-      design in progress
-    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MKwa-BqnJDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </body>
 <script src="./js/main.js"></script>
