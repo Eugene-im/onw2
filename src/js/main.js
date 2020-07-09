@@ -4,7 +4,22 @@ var count = 0;
 var timeOut;
 var collapse = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
 
-// document.querySelectorAll('.action__item_description__list.mob')[0].scrollLeft
+var ww = window.innerWidth;
+var elXscrol1 = document.querySelectorAll('.action__item_description__list.mob')[0];
+var elXscrol2 = document.querySelectorAll('.action__item_description__list.mob')[1];
+
+elXscrol1.onscroll = function(e){changeBackOnscroll(e,1)}
+elXscrol2.onscroll = function(e){changeBackOnscroll(e,2)}
+
+function changeBackOnscroll(e,i) {
+    var elwidth = e.target.firstElementChild.offsetWidth;
+    var counter = Math.floor((e.target.scrollLeft + (ww - elwidth)) / elwidth);
+    var elementsScrolled = document.querySelectorAll('#fixedPhone'+i+' .item__h1');
+    [].forEach.call(elementsScrolled, function (item,index) {
+        if(index != counter) item.classList.remove('visible');
+        else item.classList.add('visible');
+    });
+}
 
 document.addEventListener("DOMContentLoaded", ready);
 window.onscroll = function () {
@@ -66,15 +81,6 @@ function ready() {
     dwnlink.href = Name;
     if (OSName != '') clientOs.innerHTML = OSName;
 }
-
-// function goUp() {
-//     var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-
-//     if (top > 0) {
-//         window.scrollBy(0, -100);
-//         timeOut = setTimeout('goUp()', 20);
-//     } else clearTimeout(timeOut);
-// }
 
 function stickyPhone(elem, n) {
     var box = elem.getBoundingClientRect();

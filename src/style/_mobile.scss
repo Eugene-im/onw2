@@ -206,6 +206,14 @@
                 width: calc(100% + 32px);
                 margin: 0 -16px;
                 padding: 16px;
+
+                  /* Hide scrollbar */
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
                 .item__img {
                     justify-content: flex-start;
                     align-items: center;
