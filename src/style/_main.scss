@@ -1289,21 +1289,6 @@ header {
         max-width: 580px;
     }
 
-    .question__list label {
-        margin: 8px 0;
-        padding: 15px 15px 15px 0;
-        width: 100%;
-
-        &:hover {
-            background: #f2f8fc 0% 0% no-repeat padding-box;
-            border-radius: 6px;
-
-            .question__text {
-                color: $blue;
-            }
-        }
-    }
-
     .question__item {
         max-width: 580px;
         width: 100%;
@@ -1328,7 +1313,9 @@ header {
         label {
             display: block;
             position: relative;
-            padding-left: 50px;
+            margin: 8px 0;
+            padding: 15px 15px 15px 50px;
+            width: 100%;
 
             &::before {
                 top: 22px;
@@ -1339,6 +1326,14 @@ header {
                 position: absolute;
                 transition: transform 0.5s ease-in-out;
                 background: center / cover no-repeat url("../img/onw/shevron.svg");
+            }
+            &:hover {
+                background: #f2f8fc 0% 0% no-repeat padding-box;
+                border-radius: 6px;
+    
+                .question__text {
+                    color: $blue;
+                }
             }
         }
 

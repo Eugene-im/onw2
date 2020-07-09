@@ -31,6 +31,10 @@
         justify-content: center;
     }
 
+    header .menu {
+        max-width: 162px;
+    }
+
     .first__screen {
         .background__figure_1 {
             top: -306px;
@@ -65,10 +69,6 @@
 
         .download__links {
             display: none;
-        }
-
-        header .menu {
-            max-width: 162px;
         }
     }
 
@@ -117,7 +117,7 @@
         }
 
         .block__fee.second .fee__item {
-            max-width: 192px;
+            max-width: 180px;
         }
         .screen_action .screen_description {
             margin-top: -30px;
@@ -304,5 +304,8 @@
     }
     .background__wave_3 {
         bottom: -5px;
+    }
+    .policy main .content{
+        padding: 16px 24px 53px;
     }
 }
