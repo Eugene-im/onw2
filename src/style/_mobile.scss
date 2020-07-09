@@ -197,6 +197,7 @@
                     justify-content: flex-start;
                     align-items: center;
                     margin-right: unset;
+                    flex: unset;
                     .icon{
                         margin-right: 16px;
                     }
@@ -214,8 +215,8 @@
                 border-radius: 6px;
                 z-index: 5;
                 margin-right: 15px;
-                height: fit-content;
                 flex-direction: column;
+                justify-content: flex-start;
             }
             .item__description div{
                 margin-top: unset;
