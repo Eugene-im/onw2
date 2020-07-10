@@ -403,6 +403,7 @@ header {
         z-index: 2;
         position: relative;
         padding-top: 72px;
+        min-height: 100vh;
     }
 
     .first__screen_cont {
@@ -522,6 +523,7 @@ header {
         height: 460px;
         background: url("../img/onw/Group 5336.svg") 0% 0% no-repeat padding-box;
         background-size: contain;
+        background-position: center;
         margin: 64px auto 50px;
     }
 
@@ -826,6 +828,7 @@ header {
             align-items: center;
             justify-content: center;
             margin: 42px auto 59px;
+            z-index: 2;
 
             .action__item {
                 display: flex;

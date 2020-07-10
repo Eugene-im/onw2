@@ -8,15 +8,15 @@ var ww = window.innerWidth;
 var elXscrol1 = document.querySelectorAll('.action__item_description__list.mob')[0];
 var elXscrol2 = document.querySelectorAll('.action__item_description__list.mob')[1];
 
-elXscrol1.onscroll = function(e){changeBackOnscroll(e,1)}
-elXscrol2.onscroll = function(e){changeBackOnscroll(e,2)}
+elXscrol1.onscroll = function (e) { changeBackOnscroll(e, 1) }
+elXscrol2.onscroll = function (e) { changeBackOnscroll(e, 2) }
 
-function changeBackOnscroll(e,i) {
+function changeBackOnscroll(e, i) {
     var elwidth = e.target.firstElementChild.offsetWidth;
     var counter = Math.floor((e.target.scrollLeft + (ww - elwidth)) / elwidth);
-    var elementsScrolled = document.querySelectorAll('#fixedPhone'+i+' .item__h1');
-    [].forEach.call(elementsScrolled, function (item,index) {
-        if(index != counter) item.classList.remove('visible');
+    var elementsScrolled = document.querySelectorAll('#fixedPhone' + i + ' .item__h1');
+    [].forEach.call(elementsScrolled, function (item, index) {
+        if (index != counter) item.classList.remove('visible');
         else item.classList.add('visible');
     });
 }
@@ -67,13 +67,11 @@ function ready() {
     var x = document.getElementsByClassName('dwn');
     var Name = "Unknown OS";
     var OSName = '';
-    if (navigator.userAgent.indexOf("Win") != -1) OSName = 'Windows'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
-    if (navigator.userAgent.indexOf("Mac") != -1) OSName = 'MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
-    if (navigator.userAgent.indexOf("Linux") != -1) OSName = 'Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
-    if (navigator.userAgent.indexOf("Android") != -1) OSName = 'Android'; Name =
-        "Android OS";
-    if (navigator.userAgent.indexOf("like Mac") != -1) OSName = 'iOS'; Name =
-        "iOS";
+    if (navigator.userAgent.indexOf("Win") != -1) { OSName = 'Windows'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip"; }
+    else if (navigator.userAgent.indexOf("Mac") != -1) { OSName = 'MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip"; }
+    else if (navigator.userAgent.indexOf("Linux") != -1) { OSName = 'Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip"; }
+    else if (navigator.userAgent.indexOf("Android") != -1) { OSName = 'Android'; Name = "Android OS"; }
+    else if (navigator.userAgent.indexOf("like Mac") != -1) { OSName = 'iOS'; Name = "iOS"; }
 
     [].forEach.call(x, function (el) {
         el.href = Name;
