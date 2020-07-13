@@ -496,7 +496,12 @@ header {
     .download__links_qr {
         width: 94px;
         height: 94px;
-        @include setBackgroundImage("../img/onw/Group 4968.svg");
+        background-image: url('../img/onw/Group 5386.svg');
+        background-size: 94%;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5px;
     }
 
     .download__links_apple {
