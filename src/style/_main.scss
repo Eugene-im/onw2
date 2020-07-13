@@ -41,12 +41,17 @@ header {
     z-index: 6;
     position: absolute;
     width: 100%;
-    top: 0;
+    top: 0px;
     transition: background-color 0.2s, box-shadow 0.2s ease-in-out;
     &.sticky {
         background-color: #fff;
         box-shadow: 0 4px 32px #004d9926;
         position: fixed;
+        top: -1px;
+
+        .content {
+            min-height: 48px;
+        }
         .logo {
             background-image: url("../img/onw/Group 5377.svg");
         }
@@ -62,9 +67,11 @@ header {
         min-height: 72px;
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         align-content: center;
         flex-wrap: wrap;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .menu {
@@ -75,8 +82,12 @@ header {
 .logo {
     display: block;
     width: 128px;
-    height: 24px;
+    height: 25.3px;
     @include setBackgroundImage("../img/onw/Group 5332.svg", contain);
+    @media (max-width: $mobile) {
+        width: 100px;
+        height: 19.8px;
+    }
 }
 
 .content {
@@ -374,12 +385,28 @@ header {
     justify-content: space-between;
     max-width: 362px;
 
-    > li a {
-        color: inherit;
-        font-weight: 500;
-    }
-    > li:hover a {
-        color: $yellow;
+    // > li a {
+    //     color: inherit;
+    //     font-weight: 500;
+    // }
+    // > li:hover a {
+    //     color: $yellow;
+    // }
+
+    > li {
+        a {
+            color: inherit;
+            font-weight: 500;
+        }
+        &:hover a {
+            color: $yellow;
+            @media (max-width: $tablet) {
+                color: $orange;
+            }
+        }
+        &:focus a {
+            color: $orange;
+        }
     }
 }
 
@@ -1333,7 +1360,7 @@ header {
             &:hover {
                 background: #f2f8fc 0% 0% no-repeat padding-box;
                 border-radius: 6px;
-    
+
                 .question__text {
                     color: $blue;
                 }
@@ -1524,6 +1551,18 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    iframe {
+        width: 60%;
+        height: 50%;
+        @media (max-width: $tablet) {
+            width: 80%;
+            height: 40%;
+        }
+        @media (max-width: $tablet) and (orientation: landscape) {
+            width: 80%;
+            height: 80%;
+        }
+    }
 }
 
 i.icon {
@@ -1607,6 +1646,11 @@ i.icon {
     header {
         z-index: 3;
         top: 0;
+        &.sticky {
+            .content {
+                min-height: 48px;
+            }
+        }
 
         .content {
             min-height: 72px;
@@ -1617,8 +1661,19 @@ i.icon {
         }
     }
 
-    .menu > li a {
-        color: #1f333d;
+    .menu > li {
+        a {
+            color: #1f333d;
+        }
+        &:hover a {
+            color: $yellow;
+            @media (max-width: $tablet) {
+                color: $orange;
+            }
+        }
+        &:focus a {
+            color: $orange;
+        }
     }
 
     main .content {
