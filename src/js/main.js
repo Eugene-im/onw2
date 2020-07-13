@@ -82,10 +82,10 @@ function ready() {
     var Name = "Unknown OS";
     var OSName = '';
     if (navigator.userAgent.indexOf("Win") != -1) { OSName = 'Windows'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip"; }
-    else if (navigator.userAgent.indexOf("Mac") != -1) { OSName = 'MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip"; }
-    else if (navigator.userAgent.indexOf("Linux") != -1) { OSName = 'Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip"; }
     else if (navigator.userAgent.indexOf("Android") != -1) { OSName = 'Android'; Name = "Android OS"; }
     else if (navigator.userAgent.indexOf("like Mac") != -1) { OSName = 'iOS'; Name = "iOS"; }
+    else if (navigator.userAgent.indexOf("Mac") != -1) { OSName = 'MacOS'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip"; }
+    else if (navigator.userAgent.indexOf("Linux") != -1) { OSName = 'Linux'; Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip"; }
 
     [].forEach.call(x, function (el) {
         el.href = Name;

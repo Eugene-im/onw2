@@ -1551,6 +1551,18 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    iframe {
+        width: 60%;
+        height: 50%;
+        @media (max-width: $tablet) {
+            width: 80%;
+            height: 40%;
+        }
+        @media (max-width: $tablet) and (orientation: landscape) {
+            width: 80%;
+            height: 80%;
+        }
+    }
 }
 
 i.icon {
@@ -1634,7 +1646,7 @@ i.icon {
     header {
         z-index: 3;
         top: 0;
-        &.sticky{
+        &.sticky {
             .content {
                 min-height: 48px;
             }

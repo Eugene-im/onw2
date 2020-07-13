@@ -1,4 +1,16 @@
-@media (max-width: 1680px) {
+@media (min-width: 1920px) {
+    .first__screen{
+        min-height: unset;
+        max-height: 1280px;
+        .first__screen_layer{
+            min-height: 1280px;
+        }
+        .background__figure_1{
+            left: 1681px;
+        }
+    }
+}
+    @media (max-width: 1680px) {
     .foth__screen {
         .background__figure_1 {
             left: 8.85%;
