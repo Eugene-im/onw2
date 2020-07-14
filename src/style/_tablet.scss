@@ -274,6 +274,7 @@
             top: 829px;
             right: -210px;
         }
+        .question__item input + label,
         .question__item input:checked + label {
             width: 480px;
         }
@@ -305,7 +306,7 @@
     .background__wave_3 {
         bottom: -5px;
     }
-    .policy main .content{
+    .policy main .content {
         padding: 16px 24px 53px;
     }
 }

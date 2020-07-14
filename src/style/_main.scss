@@ -50,7 +50,7 @@ header {
         top: -1px;
 
         .content {
-            min-height: 48px;
+            min-height: 72px;
         }
         .logo {
             background-image: url("../img/onw/Group 5377.svg");
@@ -365,8 +365,15 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     cursor: pointer;
 
-    &:focus {
-        border-color: $orange;
+    &:hover {
+        border: 1px solid $yellow;
+        @media (max-width: $mobile) {
+            border-color: $orange;
+        }
+    }
+    &:focus,
+    &:active {
+        border: 1px solid $orange;
     }
 }
 
@@ -554,12 +561,14 @@ header {
         max-width: 910px;
         height: 460px;
         background: url("../img/onw/Group 5336.svg") 0% 0% no-repeat padding-box;
-        @media (max-width: $mobile) {
-            background: url("../img/onw/Group 5336_m.svg") 0% 0% no-repeat padding-box;
-        }
         background-size: contain;
         background-position: center;
         margin: 64px auto 50px;
+        @media (max-width: $mobile) {
+            background: url("../img/onw/Group 5336_m.svg") 0% 0% no-repeat padding-box;
+            background-size: contain;
+            background-position: center;
+        }
     }
 
     .screen__title {
@@ -1582,12 +1591,13 @@ i.icon {
 
         &:hover {
             filter: invert(40%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 filter: invert(60%) sepia(38%) saturate(5113%) hue-rotate(359deg) brightness(105%) contrast(106%);
             }
         }
 
-        &:focus {
+        &:focus,
+        &:active {
             filter: invert(60%) sepia(38%) saturate(5113%) hue-rotate(359deg) brightness(105%) contrast(106%);
         }
     }
@@ -1657,7 +1667,7 @@ i.icon {
         top: 0;
         &.sticky {
             .content {
-                min-height: 48px;
+                min-height: 72px;
             }
         }
 

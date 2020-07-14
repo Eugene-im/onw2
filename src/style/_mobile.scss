@@ -16,8 +16,16 @@
 
     header .menu {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         max-width: 146px;
+        margin-top: 7px;
+    }
+    header.sticky .content{
+        min-height: 48px;
+    }
+    .menu>li a{
+        font-size: 16px;
+        line-height: 21px;
     }
 
     .first__screen {
@@ -182,13 +190,16 @@
             margin-bottom: 0;
         }
         .screen_action.third .action__item {
-            margin-right: 10px;
+            margin-right: 15px;
             .action__item_delimeter {
                 background: url("../img/onw/Path 6041_m.svg") no-repeat;
                 background-size: contain;
                 width: 16px;
                 height: 6px;
             }
+        }
+        .screen_action.third .action__item .action__item_img_wrap{
+            margin-right: 15px;
         }
     }
     .fifth__screen {
