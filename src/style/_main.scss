@@ -496,7 +496,7 @@ header {
     .download__links_qr {
         width: 94px;
         height: 94px;
-        background-image: url('../img/onw/Group 5386.svg');
+        background-image: url("../img/onw/Group 5386.svg");
         background-size: 94%;
         background-color: #fff;
         background-repeat: no-repeat;
@@ -554,6 +554,9 @@ header {
         max-width: 910px;
         height: 460px;
         background: url("../img/onw/Group 5336.svg") 0% 0% no-repeat padding-box;
+        @media (max-width: $mobile) {
+            background: url("../img/onw/Group 5336_m.svg") 0% 0% no-repeat padding-box;
+        }
         background-size: contain;
         background-position: center;
         margin: 64px auto 50px;
@@ -1340,9 +1343,7 @@ header {
         }
 
         .question__text {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
+            @include font(20px, 24px, 16px, 21px, 500);
         }
 
         label {
@@ -1353,7 +1354,7 @@ header {
             width: 100%;
 
             &::before {
-                top: 22px;
+                top: 21px;
                 left: 17px;
                 content: "";
                 width: 8px;
@@ -1580,11 +1581,14 @@ i.icon {
         height: 24px;
 
         &:hover {
-            filter: invert(66%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
+            filter: invert(40%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
+            @media (max-width:$mobile){
+                filter: invert(60%) sepia(38%) saturate(5113%) hue-rotate(359deg) brightness(105%) contrast(106%);
+            }
         }
 
         &:focus {
-            filter: invert(59%) sepia(83%) saturate(1840%) hue-rotate(359deg) brightness(100%) contrast(106%);
+            filter: invert(60%) sepia(38%) saturate(5113%) hue-rotate(359deg) brightness(105%) contrast(106%);
         }
     }
 
