@@ -177,19 +177,35 @@ header {
     opacity: 1;
     min-width: 310px;
 
-    &:hover {
-        background-color: $yellow;
-
+    &:active {
+        background-color: $orange;
+        // @media (max-width:$tablet) {
+        //     background-color: #fff;
+        // }
         .drop__text {
             color: #ffffff;
+            // @media (max-width:$tablet) {
+            //     color: #1f333d;
+            // }
         }
     }
 
-    &:active {
-        background-color: $orange;
-
+    &:hover {
+        background-color: $yellow;
+        // @media (max-width:$tablet) {
+        //     background-color: #fff;
+        // }
         .drop__text {
             color: #ffffff;
+            // @media (max-width:$tablet) {
+            //     color: #1f333d;
+            // }
+        }
+    }
+    &.visible {
+        background-color: $yellow !important;
+        &::before {
+            filter: brightness(0) invert(1);
         }
     }
 }
