@@ -3,10 +3,16 @@ var sticky = header.offsetTop;
 var count = 0;
 var timeOut;
 var collapse = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
+var downloadLink = {
+    'mac': 'https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip',
+    'windows': 'https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip',
+    'linux':'https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip',
+    'ios':'iOS',
+    'android':'Android'
+};
+var ww = window.innerWidth;
 var x = document.querySelectorAll('.link + .drop__list_wrap')[0];
 var y = document.querySelectorAll('.drop__button + .drop__list_wrap')[0];
-
-var ww = window.innerWidth;
 var elXscrol1 = document.querySelectorAll('.action__item_description__list.mob')[0];
 var elXscrol2 = document.querySelectorAll('.action__item_description__list.mob')[1];
 
@@ -23,57 +29,13 @@ window.onscroll = function () {
     if ((y !== undefined) && (y.classList.contains('visible'))) {
         y.classList.toggle('visible');
         document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
-        // document.querySelectorAll('.drop')[0].classList.toggle('visible');
     }
 };
 
 document.addEventListener("DOMContentLoaded", ready);
-document.onclick = function (e) {
+document.onclick = clickState;
 
-    var id = e.target.id;
 
-    if ((y !== undefined) && e.target.classList.contains('drop__button')) {
-        y.classList.toggle('visible');
-        document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
-        // document.querySelectorAll('.drop')[0].classList.toggle('visible');
-    } else if ((y !== undefined) && (y.classList.contains('visible'))) {
-        y.classList.toggle('visible');
-        document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
-        // document.querySelectorAll('.drop')[0].classList.toggle('visible');
-    } else if (e.target.classList.contains('question__item')) {
-        if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
-            this.classList.toggle('background')
-        }
-    } else if (e.target.classList.contains('drop__list_wrap_open') && (x !== undefined) && !(x.classList.contains('open')) ) {
-        e.preventDefault();
-        x.classList.add('open');
-        document.querySelectorAll('.drop__list_wrap_open')[0].classList.add('open');
-    } else if (x !== undefined){
-        // e.preventDefault();
-        x.classList.remove('open');
-        document.querySelectorAll('.drop__list_wrap_open')[0].classList.remove('open');
-
-    }
-
-    if (id) {
-        [].forEach.call(collapse, function (item) {
-            if (item !== id) {
-                document.getElementById(item).checked = false;
-            }
-        });
-    }
-}
-
-// link.onclick = openDd;
-
-// function openDd(e) {
-//     e.preventDefault();
-//     if (x.classList.contains('open')) {
-//         x.classList.remove('open');
-//     } else {
-//         x.classList.add('open');
-//     }
-// }
 
 if ((elXscrol1 !== undefined) && (elXscrol1 !== undefined)) {
     elXscrol1.onscroll = function (e) {
@@ -104,6 +66,39 @@ if ((actionItem1 !== undefined) && (actionItem2 !== undefined)) {
     actionItem2.onmouseout = hoverItem;
 }
 
+function clickState(e) {
+
+    var id = e.target.id;
+
+    if ((y !== undefined) && e.target.classList.contains('drop__button')) {
+        y.classList.toggle('visible');
+        document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
+    } else if ((y !== undefined) && (y.classList.contains('visible'))) {
+        y.classList.toggle('visible');
+        document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
+    } else if (e.target.classList.contains('question__item')) {
+        if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
+            this.classList.toggle('background')
+        }
+    } else if (e.target.classList.contains('drop__list_wrap_open') && (x !== undefined) && !(x.classList.contains('open'))) {
+        e.preventDefault();
+        x.classList.add('open');
+        document.querySelectorAll('.drop__list_wrap_open')[0].classList.add('open');
+    } else if (x !== undefined) {
+        x.classList.remove('open');
+        document.querySelectorAll('.drop__list_wrap_open')[0].classList.remove('open');
+
+    }
+
+    if (id) {
+        [].forEach.call(collapse, function (item) {
+            if (item !== id) {
+                document.getElementById(item).checked = false;
+            }
+        });
+    }
+}
+
 function changeBackOnscroll(e, i) {
     var elwidth = e.target.firstElementChild.offsetWidth;
     var counter = Math.floor((e.target.scrollLeft + (ww - elwidth)) / elwidth);
@@ -120,19 +115,19 @@ function ready() {
     var OSName = '';
     if (navigator.userAgent.indexOf("Win") != -1) {
         OSName = 'Windows';
-        Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/win-unpacked.zip";
+        Name = downloadLink.windows;
     } else if (navigator.userAgent.indexOf("Android") != -1) {
         OSName = 'Android';
-        Name = "Android OS";
+        Name = downloadLink.android;
     } else if (navigator.userAgent.indexOf("like Mac") != -1) {
         OSName = 'iOS';
-        Name = "iOS";
+        Name = downloadLink.ios;
     } else if (navigator.userAgent.indexOf("Mac") != -1) {
         OSName = 'MacOS';
-        Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/mac.zip";
+        Name = downloadLink.mac;
     } else if (navigator.userAgent.indexOf("Linux") != -1) {
         OSName = 'Linux';
-        Name = "https://onwallet-desktop-ui.s3.eu-central-1.amazonaws.com/linux-unpacked.zip";
+        Name = downloadLink.linux;
     }
 
     [].forEach.call(x, function (el) {
