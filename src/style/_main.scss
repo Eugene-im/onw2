@@ -184,6 +184,13 @@ header {
             color: #ffffff;
         }
     }
+    &:active, &:focus {
+        background-color: $orange;
+
+        .drop__text {
+            color: #ffffff;
+        }
+    }
 }
 
 .drop__wrap {
@@ -292,6 +299,10 @@ header {
 
         &:hover {
             background-color: $yellow;
+        }
+
+        &:active, &:focus {
+            background-color: $orange;
         }
     }
 }
