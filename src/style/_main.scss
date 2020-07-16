@@ -184,7 +184,8 @@ header {
             color: #ffffff;
         }
     }
-    &:active, &:focus {
+
+    &:active {
         background-color: $orange;
 
         .drop__text {
@@ -235,9 +236,16 @@ header {
     &:hover {
         background-color: $yellow;
 
+        @media (max-width:$tablet) {
+            background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+
         &::before {
             filter: brightness(0) invert(1);
         }
+    }
+    &.visible {
+        background-color: $yellow !important;
     }
 }
 
@@ -301,7 +309,7 @@ header {
             background-color: $yellow;
         }
 
-        &:active, &:focus {
+        &:active {
             background-color: $orange;
         }
     }
@@ -390,7 +398,6 @@ header {
         }
     }
 
-    &:focus,
     &:active {
         border: 1px solid $orange;
     }
@@ -1654,7 +1661,7 @@ i.icon {
             }
         }
 
-        &:focus,
+
         &:active {
             filter: invert(60%) sepia(38%) saturate(5113%) hue-rotate(359deg) brightness(105%) contrast(106%);
         }
@@ -1727,6 +1734,10 @@ i.icon {
         &.sticky {
             .content {
                 min-height: 72px;
+
+                @media (max-width:$tablet) {
+                    min-height: 48px;
+                }
             }
         }
 
