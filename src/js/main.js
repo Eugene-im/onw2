@@ -31,11 +31,12 @@ document.onclick = function (e) {
 
     var id = e.target.id;
 
-    if (e.target.classList.contains('drop__button') && (y !== undefined)) {
+    if ((y !== undefined) && e.target.classList.contains('drop__button')) {
         y.classList.toggle('visible');
         document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
     } else if ((y !== undefined) && (y.classList.contains('visible'))) {
-        y.classList.toggle('visible')
+        y.classList.toggle('visible');
+        document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
     } else if (e.target.classList.contains('question__item')) {
         if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
             this.classList.toggle('background')
