@@ -23,7 +23,7 @@ window.onscroll = function () {
     if ((y !== undefined) && (y.classList.contains('visible'))) {
         y.classList.toggle('visible');
         document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
-        document.querySelectorAll('.drop')[0].classList.toggle('visible');
+        // document.querySelectorAll('.drop')[0].classList.toggle('visible');
     }
 };
 
@@ -35,11 +35,11 @@ document.onclick = function (e) {
     if ((y !== undefined) && e.target.classList.contains('drop__button')) {
         y.classList.toggle('visible');
         document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
-        document.querySelectorAll('.drop')[0].classList.toggle('visible');
+        // document.querySelectorAll('.drop')[0].classList.toggle('visible');
     } else if ((y !== undefined) && (y.classList.contains('visible'))) {
         y.classList.toggle('visible');
         document.querySelectorAll('.drop__button')[0].classList.toggle('visible');
-        document.querySelectorAll('.drop')[0].classList.toggle('visible');
+        // document.querySelectorAll('.drop')[0].classList.toggle('visible');
     } else if (e.target.classList.contains('question__item')) {
         if (e.target.getElementsByTagName('input')[0].getAttribute('checked')) {
             this.classList.toggle('background')

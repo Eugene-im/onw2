@@ -179,35 +179,23 @@ header {
 
     &:active {
         background-color: $orange;
-        // @media (max-width:$tablet) {
-        //     background-color: #fff;
-        // }
+
         .drop__text {
+
             color: #ffffff;
-            // @media (max-width:$tablet) {
-            //     color: #1f333d;
-            // }
+
         }
     }
 
     &:hover {
         background-color: $yellow;
-        // @media (max-width:$tablet) {
-        //     background-color: #fff;
-        // }
+
         .drop__text {
+
             color: #ffffff;
-            // @media (max-width:$tablet) {
-            //     color: #1f333d;
-            // }
         }
     }
-    &.visible {
-        background-color: $yellow !important;
-        &::before {
-            filter: brightness(0) invert(1);
-        }
-    }
+
 }
 
 .drop__wrap {
@@ -224,6 +212,14 @@ header {
     padding-left: 24px;
     line-height: 56px;
     width: 100%;
+    border-radius: 28px;
+    -webkit-tap-highlight-color: $orange;
+
+    &:active{
+        color: #ffffff;
+        background-color: $orange;
+
+    }
 }
 
 .drop__button {
@@ -258,13 +254,16 @@ header {
 
         &::before {
             filter: brightness(0) invert(1);
+
             @media (max-width:$tablet) {
                 filter: unset;
             }
         }
     }
+
     &.visible {
         background-color: $yellow !important;
+
         &::before {
             filter: brightness(0) invert(1);
         }
