@@ -213,7 +213,7 @@ header {
     line-height: 56px;
     width: 100%;
     border-radius: 28px;
-    -webkit-tap-highlight-color: $orange;
+    // -webkit-tap-highlight-color: $orange;
 
     &:active{
         color: #ffffff;
@@ -244,7 +244,13 @@ header {
         left: 0;
         margin: auto;
     }
+    &:active{
+        background-color: $orange !important;
 
+        &::before {
+            filter: brightness(0) invert(1);
+        }
+    }
     &:hover {
         background-color: $yellow;
 
