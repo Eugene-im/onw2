@@ -705,6 +705,7 @@ header {
     }
 
     .button_play_video {
+        display: none;
         width: 86px;
         height: 86px;
         background: $white0;
@@ -731,6 +732,7 @@ header {
     }
 
     .button_play_video_text {
+        display: none;
         position: relative;
         z-index: 2;
         font-weight: 500;
