@@ -46,10 +46,14 @@ if ((elXscrol1 !== undefined) && (elXscrol1 !== undefined)) {
     };
 }
 
-if (playvid !== undefined) {
+try{
     playvid.onclick = function () {
         overflow.classList.toggle('visible')
     };
+
+} catch (e) {
+    console.log(e);
+
 }
 
 if (overflow !== undefined) {
@@ -174,3 +178,4 @@ function hoverItem(e) {
         });
     }
 }
+
